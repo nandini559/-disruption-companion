@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=domine:wght@100..900&amp;family=inter:wght@100..900&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-tertiary": "#ffffff", "secondary-fixed-dim": "#a1d0c4", surface: "#f4fbf7", "error-container": "#ffdad6", "outline-variant": "#bbcac5", "on-tertiary-fixed": "#3c0800", "on-primary-fixed-variant": "#005045", "on-primary-fixed": "#00201b", "on-surface": "#171d1b", "surface-container": "#e9efec", "surface-container-highest": "#dee4e1", "inverse-primary": "#57dbc3", "on-primary": "#ffffff", "on-surface-variant": "#3c4946", "tertiary-fixed": "#ffdad2", "surface-bright": "#f4fbf7", "on-secondary-container": "#3e6b61", background: "#f4fbf7", primary: "#006b5c", "on-secondary": "#ffffff", "secondary-fixed": "#bdece0", "surface-variant": "#dee4e1", "on-tertiary-container": "#5f1704", outline: "#6c7a76", "on-secondary-fixed-variant": "#214e45", "surface-tint": "#006b5c", "inverse-on-surface": "#ecf2ef", "surface-container-lowest": "#ffffff", "on-error-container": "#93000a", secondary: "#3a665d", "surface-container-high": "#e3eae6", "primary-fixed": "#77f8df", "on-background": "#171d1b", "on-secondary-fixed": "#00201b", "primary-fixed-dim": "#57dbc3", "on-tertiary-fixed-variant": "#7d2c18", "tertiary-container": "#e57b60", "on-error": "#ffffff", "secondary-container": "#bae9dd", error: "#ba1a1a", "surface-container-low": "#eff5f2", tertiary: "#9c432c", "inverse-surface": "#2b3230", "surface-dim": "#d5dbd8", "tertiary-fixed-dim": "#ffb4a2", "primary-container": "#03ac96", "on-primary-container": "#003830", "tertiary-dim": "#714c00", "secondary-dim": "#664f24", "error-dim": "#70030f", "primary-dim": "#005e52"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {"space-xl": "2rem", "space-lg": "1.5rem", "space-sm": "0.75rem", "space-2xs": "0.25rem", "gutter-desktop": "1.5rem", "gutter-mobile": "1rem", "space-md": "1rem", "space-3xl": "4rem", "space-xs": "0.5rem", "margin-mobile": "1rem", "space-2xl": "3rem", "touch-min": "3rem", "margin-desktop": "2.5rem"}, fontFamily: {"label-md": ["inter"], "display-lg-mobile": ["domine"], "headline-lg": ["domine"], "body-sm": ["inter"], "headline-sm": ["domine"], "body-lg": ["inter"], "headline-md": ["domine"], "body-md": ["inter"], "label-lg": ["inter"], "label-sm": ["inter"], "display-lg": ["domine"], headline: ["Domine"], display: ["Domine"], body: ["Inter"], label: ["Inter"]}, fontSize: {"label-md": ["12px", {lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "600"}], "display-lg-mobile": ["32px", {lineHeight: "38px", letterSpacing: "-0.01em", fontWeight: "700"}], "headline-lg": ["28px", {lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "600"}], "body-sm": ["14px", {lineHeight: "20px", letterSpacing: "0", fontWeight: "400"}], "headline-sm": ["18px", {lineHeight: "26px", letterSpacing: "0", fontWeight: "600"}], "body-lg": ["18px", {lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "400"}], "headline-md": ["22px", {lineHeight: "30px", letterSpacing: "0", fontWeight: "600"}], "body-md": ["16px", {lineHeight: "24px", letterSpacing: "0", fontWeight: "400"}], "label-lg": ["14px", {lineHeight: "20px", letterSpacing: "0.02em", fontWeight: "600"}], "label-sm": ["11px", {lineHeight: "14px", letterSpacing: "0.06em", fontWeight: "700"}], "display-lg": ["40px", {lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm shrink-0"><img alt="DHR Sahayak Heritage Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UbltWqLA9bk_WhV6CjMavZqswFiql4ZvSDeoKYxVFsBHzzr4CTGqKWImSAWIyIRVkn2yGrEFwXSr44_u2PIsdU_Zp8kEavOO-M-Lenm6kTdQrsVzrxLbA1WoAybtrXdgbwpVD1x24tSqUJpsDXo0oJc62KbsAwZY12FFIsCKyn_29iFMb5yDsMw034lcUieQcRUZPuX5iaivLdOJncuAZvzYsH4zJWgt2aKAOgK_ty6x6UtlBzm5QIkBpw"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">DHR Sahayak</span><span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase">Heritage Hill Rail</span></div><span class="font-label-sm text-label-sm text-on-surface-variant hidden sm:inline-block">Darjeeling Himalayan Railway • Station Disruption Companion</span></div></div><nav class="hidden xl:flex items-center gap-space-xs bg-surface-container-low p-1.5 rounded-xl shadow-[0_1px_4px_rgba(22,74,65,0.04)]" data-active-classes="bg-primary-container text-on-primary-container font-label-lg rounded-lg"><a class="px-space-sm py-2 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" data-path="home" href="#">Home</a><a class="px-space-sm py-2 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" data-path="staff-mode" href="#">Staff Mode</a><a class="px-space-sm py-2 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" data-path="passenger-tablet-display" href="#">Passenger Tablet Display</a><a class="px-space-sm py-2 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" data-path="passenger-mobile-qr-view" href="#">Passenger Mobile / QR View</a><a aria-current="page" class="px-space-sm py-2 transition-colors bg-primary-container text-on-primary-container font-label-lg rounded-lg" data-path="components-edge-states" href="#">Components &amp; Edge States</a></nav><div class="flex items-center gap-space-xs shrink-0"><div class="hidden md:flex items-center gap-space-xs px-space-sm py-1.5 rounded-full bg-secondary-container/60 shadow-[inset_0_1px_1px_rgba(0,0,0,0.04)]"><span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span></span><span class="font-label-sm text-label-sm text-on-secondary-container font-bold tracking-wide">Offline Ready</span></div><div class="hidden sm:flex items-center gap-1 px-space-sm py-1.5 rounded-full bg-surface-container-high text-on-surface"><span class="material-symbols-outlined text-[16px] text-secondary">location_on</span><span class="font-label-sm text-label-sm font-semibold">Ghum (2,258 m)</span></div><button aria-label="Station Desk Help" class="h-9 w-9 rounded-full bg-surface-container flex items-center justify-center hover:bg-surface-container-high transition-colors" title="Station Emergency Desk Help" type="button"><span class="material-symbols-outlined text-[20px] text-secondary">support_agent</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-140px)]"><div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop py-space-lg"><div class="flex flex-col w-full">
+<!-- Top Heritage Hero / Diagnostic Banner -->
+<div class="relative w-full rounded-2xl bg-surface-container-high overflow-hidden p-space-lg lg:p-space-xl shadow-md mb-space-2xl">
+<div class="absolute -right-16 -bottom-16 w-80 h-80 rounded-full bg-secondary-fixed/20 blur-3xl pointer-events-none"></div>
+<div class="absolute -left-12 -top-12 w-64 h-64 rounded-full bg-primary-fixed/20 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="px-space-xs py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-wider">Design System &amp; Protocol Audit</span>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+            NFR Katihar Div Standard
+          </span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Station Hub: Ghum (2,258 m)</span>
+</div>
+<p class="font-headline-lg text-headline-lg text-primary tracking-tight">Components, Dialogue Modals &amp; Resilient Edge States</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Standardized offline UI tokens, passenger exception dialogs, and edge telemetry verified for low-bandwidth Himalayan topography and bilingual high-altitude stations.</p>
+</div>
+<!-- Quick Telemetry Snapshot Widget -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-sm bg-surface-container-lowest p-space-sm rounded-xl shadow-sm shrink-0">
+<div class="flex items-center gap-space-xs px-space-xs">
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed flex items-center justify-center text-primary font-headline-sm text-headline-sm">
+            4.2k
+          </div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cached Phrases</span>
+<span class="font-label-md text-label-md text-primary">Nepali • Bengali • Hindi</span>
+</div>
+</div>
+<div class="h-8 w-px bg-outline-variant/40 hidden sm:block"></div>
+<div class="flex items-center gap-space-xs px-space-xs">
+<div class="w-3 h-3 rounded-full bg-secondary animate-pulse"></div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Edge Gateway</span>
+<span class="font-label-md text-label-md text-secondary">Broadcasting 868MHz</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 1: Standardized Interactive Passenger & Staff Modals -->
+<div class="flex flex-col gap-space-md mb-space-3xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-6 rounded bg-primary"></span>
+<h2 class="font-headline-md text-headline-md text-primary">System Dialogs &amp; Operational Overlays</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">3 Architectural Scenarios</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg items-start">
+<!-- MODAL 1: Refund Information Protocol -->
+<div class="flex flex-col bg-surface-container-lowest rounded-2xl p-space-lg shadow-md hover:shadow-xl transition-shadow relative overflow-hidden">
+<div class="h-1.5 w-full bg-primary absolute top-0 left-0"></div>
+<div class="flex items-center justify-between gap-space-xs mb-space-sm">
+<span class="px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm">DHR Ref-Rule 54/A</span>
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px]">currency_rupee</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Ticket Refund Procedure</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+          Your ticket is eligible for a <strong class="text-on-surface font-semibold">100% full refund</strong> because Toy Train #52541 has been delayed beyond 30 minutes due to weather.
+        </p>
+<!-- Process Checklist -->
+<div class="flex flex-col gap-space-sm bg-surface-container-low p-space-sm rounded-xl mb-space-md">
+<div class="flex items-start gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center shrink-0 mt-0.5">1</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Keep Ticket / Digital PNR</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Paper ticket or QR passenger pass.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center shrink-0 mt-0.5">2</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Visit Station Counter 1</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Dedicated mountain disruption wicket.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-xs">
+<span class="w-5 h-5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm flex items-center justify-center shrink-0 mt-0.5">3</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Instant Cash / UPI Credit</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Zero cancellation fee applied.</span>
+</div>
+</div>
+</div>
+<div class="p-space-xs bg-surface-container rounded-lg flex items-center gap-space-xs mb-space-md">
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0">support_agent</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Station Desk Staff Hotline: <strong class="text-on-surface font-semibold">Ghum Ext. 104</strong></span>
+</div>
+<div class="flex items-center gap-space-xs pt-space-xs">
+<button class="w-full h-11 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-1.5 hover:bg-primary-container transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+            Generate PNR Voucher
+          </button>
+</div>
+</div>
+<!-- MODAL 2: Alternative Road Transport -->
+<div class="flex flex-col bg-surface-container-lowest rounded-2xl p-space-lg shadow-md hover:shadow-xl transition-shadow relative overflow-hidden">
+<div class="h-1.5 w-full bg-secondary absolute top-0 left-0"></div>
+<div class="flex items-center justify-between gap-space-xs mb-space-sm">
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">Active Transit Bridge</span>
+<div class="flex items-center gap-1 text-secondary font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span>Live Dispatch</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Emergency Road Transport Fleet</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+          Continuous shuttle deployment for stranded passengers along Hill Cart Road during narrow-gauge track suspension.
+        </p>
+<!-- Shuttle Detail Cards -->
+<div class="flex flex-col gap-space-xs bg-surface-container-low p-space-sm rounded-xl mb-space-md">
+<div class="flex items-center justify-between py-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Fleet Status</span>
+<span class="font-label-md text-label-md text-secondary">4 Hill Shuttles Standby</span>
+</div>
+<div class="flex items-center justify-between py-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Boarding Bay</span>
+<span class="font-label-md text-label-md text-primary">Forecourt Gate 2 (West Outgate)</span>
+</div>
+<div class="flex items-center justify-between py-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Destination</span>
+<span class="font-label-md text-label-md text-on-surface">Chowrasta, Darjeeling</span>
+</div>
+<div class="flex items-center justify-between py-1">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Transit Window</span>
+<span class="font-label-md text-label-md text-on-surface">7.2 km (~20 mins departure)</span>
+</div>
+</div>
+<!-- Driver / Attendant Card -->
+<div class="flex items-center gap-space-sm p-space-xs bg-surface-container rounded-lg mb-space-md">
+<div class="w-9 h-9 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">directions_bus</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-primary truncate">Coordinator: Insp. B. Tamang</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Badge: DHR-MV-882</span>
+</div>
+</div>
+<button class="w-full h-11 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md flex items-center justify-center gap-1.5 hover:opacity-90 transition-opacity shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">alt_route</span>
+          View Route &amp; Assistance Staff
+        </button>
+</div>
+<!-- MODAL 3: Offline Mesh & System Health -->
+<div class="flex flex-col bg-surface-container-lowest rounded-2xl p-space-lg shadow-md hover:shadow-xl transition-shadow relative overflow-hidden">
+<div class="h-1.5 w-full bg-primary-container absolute top-0 left-0"></div>
+<div class="flex items-center justify-between gap-space-xs mb-space-sm">
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Hardware Node GHUM-01</span>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[15px]">wifi_tethering</span>
+            Mesh Active
+          </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-space-xs">Station Offline Node Health</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+          Autonomous edge server hosting local models, synthesized voice caches, and mesh radio relay for mountain cut-off resilience.
+        </p>
+<!-- Metric Stream -->
+<div class="flex flex-col gap-space-xs mb-space-md">
+<div class="p-space-xs rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">translate</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Local SLM Translation</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Indic-Tiny model on edge NPU</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed-variant font-label-sm text-label-sm">0.4s • Ready</span>
+</div>
+<div class="p-space-xs rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">graphic_eq</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Audio Synthesis Cache</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pre-rendered railway advisories</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-primary-fixed text-on-primary-fixed-variant font-label-sm text-label-sm">384 Presets</span>
+</div>
+<div class="p-space-xs rounded-xl bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">radar</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Packet Radio &amp; Wi-Fi</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">868 MHz LoRa + Wi-Fi Direct</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">100% Signal</span>
+</div>
+</div>
+<button class="w-full h-11 rounded-lg bg-surface-container-high text-primary font-label-md text-label-md flex items-center justify-center gap-1.5 hover:bg-surface-container-highest transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">sync_alt</span>
+          Trigger Manual Sync Mesh
+        </button>
+</div>
+</div>
+</div>
+<!-- SECTION 2: Edge & Error States Catalog -->
+<div class="flex flex-col gap-space-md mb-space-3xl">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-6 rounded bg-secondary"></span>
+<h2 class="font-headline-md text-headline-md text-primary">Edge &amp; Exception States Catalog</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Handling Severe Topography, Offline Initializers &amp; Form Failures</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+<!-- STATE A: Normal Service -->
+<div class="flex flex-col bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-shadow relative">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-space-xs py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+            Condition Alpha: Normal Line Clear
+          </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Elevation 2,258 m</span>
+</div>
+<div class="flex items-center gap-space-md mb-space-sm">
+<div class="w-16 h-16 rounded-xl bg-surface-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[36px] text-secondary">train</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-primary">All DHR Toy Train Services Running On-Time</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Ghum Loop, Batasia Curve, and Kurseong link report clear railheads with no fog speed restrictions.</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">schedule</span>
+<span class="font-label-md text-label-md text-on-surface">Next Toy Train #52540 (Darjeeling Mail Shifter)</span>
+</div>
+<span class="font-label-md text-label-md text-secondary">10:45 AM (P1)</span>
+</div>
+</div>
+<!-- STATE B: Unknown Delay / Track Assessment -->
+<div class="flex flex-col bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-shadow relative">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-space-xs py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[16px]">engineering</span>
+            Condition Amber: Assessment in Progress
+          </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Milepost 42/6</span>
+</div>
+<div class="flex items-center gap-space-md mb-space-sm">
+<div class="w-16 h-16 rounded-xl bg-tertiary-fixed/30 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[36px] text-on-tertiary-container">landslide</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-primary">Track Clearance Inspection at Batasia Loop</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Mountain patrol teams are clearing monsoon debris. Revised departure will post automatically within 15 minutes.</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-2.5 h-2.5 rounded-full bg-on-tertiary-container animate-pulse"></div>
+<span class="font-label-md text-label-md text-on-surface">Signal Guard: Radio Patrol Echo-2</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Next Ping: 09:15 AM</span>
+</div>
+</div>
+<!-- STATE C: Offline Initialization / Syncing -->
+<div class="flex flex-col bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-shadow relative">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-space-xs py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[16px] text-primary animate-spin">refresh</span>
+            Mesh Initialization In Progress
+          </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Edge Storage 92%</span>
+</div>
+<div class="flex items-center gap-space-md mb-space-sm">
+<div class="w-16 h-16 rounded-xl bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[36px] text-primary">phonelink_setup</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-primary">Loading Regional Dictionaries</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Compiling speech phonemes for Nepali (नेपाली), Bengali (বাংলা), and Hindi (हिंदी) to operate without internet.</p>
+</div>
+</div>
+<!-- Custom Progress Bar -->
+<div class="flex flex-col gap-1.5 bg-surface-container-low p-space-sm rounded-xl">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Synchronizing Himalayan dialect lexicon</span>
+<span class="text-primary font-bold">78%</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary rounded-full w-[78%] transition-all duration-500"></div>
+</div>
+</div>
+</div>
+<!-- STATE D: Form Validation & Field Warning -->
+<div class="flex flex-col bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-shadow relative">
+<div class="flex items-center justify-between mb-space-sm">
+<span class="px-space-xs py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm flex items-center gap-1 font-semibold">
+<span class="material-symbols-outlined text-[16px]">error_outline</span>
+            Validation Block: Disruption Broadcast
+          </span>
+<span class="font-label-sm text-label-sm text-on-error-container font-medium">Station Master Action Required</span>
+</div>
+<div class="flex items-start gap-space-md mb-space-sm">
+<div class="w-16 h-16 rounded-xl bg-error-container/50 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[36px] text-error">warning</span>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-headline-sm text-error">Missing Estimated Delay Window</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">The hill announcement protocol requires an integer delay value (minutes) before multilingual audio synthesis can be triggered.</p>
+</div>
+</div>
+<!-- Inline Simulated Input Form with Error Presentation -->
+<div class="flex flex-col gap-1 bg-surface-container-low p-space-sm rounded-xl">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-error font-semibold">Expected Toy Train Delay Duration *</span>
+<span class="font-label-sm text-label-sm text-error">Field cannot be empty</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="flex-1 bg-surface-container-lowest rounded-lg p-2 flex items-center justify-between shadow-inner">
+<span class="font-body-sm text-body-sm text-on-surface-variant">e.g. 45</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">MINUTES</span>
+</div>
+<button class="px-space-sm py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md" type="button">
+              Resolve
+            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 3: Design Tokens & Reusable Component Matrix -->
+<div class="flex flex-col gap-space-lg mb-space-xl">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-6 rounded bg-primary-container"></span>
+<h2 class="font-headline-md text-headline-md text-primary">DHR Reusable Component Matrix</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Touch-Target &amp; High-Altitude Calibrated</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- SUBSECTION 3A: Interactive Audio Player Suite -->
+<div class="flex flex-col bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-headline-sm text-headline-sm text-primary">Passenger Audio Broadcast Player</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">Accessible WCAG AAA</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-lg">Engineered for travelers walking through dense hill mist and low-visibility mountain coaches.</p>
+<!-- STATE: Active Audio Playing -->
+<div class="flex flex-col gap-space-sm bg-surface-container-low p-space-md rounded-xl mb-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm">Nepali • प्रसारण हुँदैछ</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Toy Train #52541 Status</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">00:14 / 00:38</span>
+</div>
+<!-- Audio Waveform Visualization Simulation -->
+<div class="flex items-end justify-between h-10 w-full px-2 gap-1">
+<div class="w-1.5 h-3 bg-secondary rounded-full"></div>
+<div class="w-1.5 h-6 bg-secondary rounded-full"></div>
+<div class="w-1.5 h-8 bg-secondary rounded-full animate-pulse"></div>
+<div class="w-1.5 h-10 bg-primary rounded-full"></div>
+<div class="w-1.5 h-7 bg-primary rounded-full animate-pulse"></div>
+<div class="w-1.5 h-4 bg-secondary rounded-full"></div>
+<div class="w-1.5 h-9 bg-secondary rounded-full"></div>
+<div class="w-1.5 h-5 bg-secondary rounded-full"></div>
+<div class="w-1.5 h-8 bg-primary rounded-full animate-pulse"></div>
+<div class="w-1.5 h-3 bg-secondary-fixed-dim rounded-full"></div>
+<div class="w-1.5 h-2 bg-surface-dim rounded-full"></div>
+<div class="w-1.5 h-2 bg-surface-dim rounded-full"></div>
+<div class="w-1.5 h-2 bg-surface-dim rounded-full"></div>
+<div class="w-1.5 h-2 bg-surface-dim rounded-full"></div>
+</div>
+<!-- Scrub and Controls -->
+<div class="flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-space-xs">
+<button class="w-11 h-11 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-md hover:bg-primary-container transition-colors" title="Pause Audio" type="button">
+<span class="material-symbols-outlined text-[24px]">pause</span>
+</button>
+<button class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-surface-container-high" title="Replay 10s" type="button">
+<span class="material-symbols-outlined text-[18px]">replay_10</span>
+</button>
+</div>
+<div class="flex items-center gap-1">
+<span class="px-space-xs py-1 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">Speed 1.0x</span>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-on-surface" title="Audio Settings" type="button">
+<span class="material-symbols-outlined text-[16px]">volume_up</span>
+</button>
+</div>
+</div>
+</div>
+<!-- STATE: Idle / Disabled Player Comparisons -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+<div class="p-space-sm bg-surface-container-high rounded-xl flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">play_arrow</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary">Bengali Audio</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">0:42 Ready</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-secondary">download_done</span>
+</div>
+<div class="p-space-sm bg-surface-container-high/50 rounded-xl flex items-center justify-between opacity-60">
+<div class="flex items-center gap-space-xs">
+<div class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">block</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant">Tibetan Feed</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Uncached</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Unavailable</span>
+</div>
+</div>
+</div>
+<!-- SUBSECTION 3B: Buttons, Segmented Language Switchers & Badges -->
+<div class="flex flex-col bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-headline-sm text-headline-sm text-primary">Action &amp; Linguistic Controls</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">48px Touch Compliant</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Multi-script switchers allowing instantaneous re-rendering of station departure displays.</p>
+<!-- Script Segmented Control -->
+<div class="flex flex-col gap-space-2xs mb-space-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Segmented Script Selector</span>
+<div class="grid grid-cols-4 bg-surface-container-high p-1 rounded-xl gap-1">
+<button class="h-11 rounded-lg bg-primary text-on-primary font-label-md text-label-md shadow-sm transition-all flex flex-col items-center justify-center" type="button">
+<span>ENG</span>
+<span class="text-[9px] opacity-75 font-normal">English</span>
+</button>
+<button class="h-11 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all flex flex-col items-center justify-center" type="button">
+<span>हिंदी</span>
+<span class="text-[9px] opacity-75 font-normal">Hindi</span>
+</button>
+<button class="h-11 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all flex flex-col items-center justify-center" type="button">
+<span>नेपाली</span>
+<span class="text-[9px] opacity-75 font-normal">Nepali</span>
+</button>
+<button class="h-11 rounded-lg text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-all flex flex-col items-center justify-center" type="button">
+<span>বাংলা</span>
+<span class="text-[9px] opacity-75 font-normal">Bengali</span>
+</button>
+</div>
+</div>
+<!-- Button States Matrix -->
+<div class="flex flex-col gap-space-2xs mb-space-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Action Buttons Palette</span>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-xs">
+<button class="h-12 px-space-md rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-sm hover:bg-primary-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">campaign</span>
+              Primary Action
+            </button>
+<button class="h-12 px-space-md rounded-lg bg-secondary-container text-on-secondary-container font-label-md text-label-md flex items-center justify-center gap-1.5 hover:bg-secondary-fixed transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">share_location</span>
+              Secondary Action
+            </button>
+<button class="h-12 px-space-md rounded-lg bg-error text-on-error font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-sm hover:opacity-90 transition-opacity" type="button">
+<span class="material-symbols-outlined text-[18px]">report</span>
+              Disruption Halt
+            </button>
+</div>
+</div>
+<!-- System Pill Badges Matrix -->
+<div class="flex flex-col gap-space-2xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Status Indicator Badges</span>
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="px-space-sm py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+              LoRa Relay Mesh Connected
+            </span>
+<span class="px-space-sm py-1.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">cloud_sync</span>
+              Sync Pending (2 Items)
+            </span>
+<span class="px-space-sm py-1.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">lock_clock</span>
+              Station Clock Synced
+            </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 4: Live Interactive Station Disruption Simulator (Hackathon Demo Proof) -->
+<div class="flex flex-col bg-surface-container-high p-space-lg lg:p-space-xl rounded-2xl shadow-md mb-space-xl">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm mb-space-lg">
+<div class="flex flex-col">
+<span class="px-space-xs py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm w-fit mb-1">Interactive Verification Sandbox</span>
+<h3 class="font-headline-lg text-headline-lg text-primary">Live Emergency Override Simulator</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Railway officials can toggle conditions to verify dynamic UI adaptation across station monitors.</p>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="h-10 px-space-sm rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md hover:bg-surface-container transition-colors shadow-sm" id="btn-state-normal" type="button">
+          State: Line Clear
+        </button>
+<button class="h-10 px-space-sm rounded-lg bg-surface-container-lowest text-on-tertiary-container font-label-md text-label-md hover:bg-surface-container transition-colors shadow-sm" id="btn-state-landslide" type="button">
+          State: Batasia Block
+        </button>
+<button class="h-10 px-space-sm rounded-lg bg-surface-container-lowest text-error font-label-md text-label-md hover:bg-surface-container transition-colors shadow-sm" id="btn-state-offline" type="button">
+          State: Edge Mesh
+        </button>
+</div>
+</div>
+<!-- Dynamic Target Container Updated By Vanilla JS -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest transition-all duration-300 flex flex-col md:flex-row md:items-center justify-between gap-space-md shadow-sm" id="simulator-feedback">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-xl bg-secondary-container text-secondary flex items-center justify-center shrink-0" id="sim-icon-box">
+<span class="material-symbols-outlined text-[32px]" id="sim-icon">check_circle</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wide" id="sim-badge">Active Simulation: Line Clear</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">• Broadcast Node: GHUM-01</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary" id="sim-headline">All Ghum–Darjeeling sections running with green signals.</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant" id="sim-desc">Station PA speakers and bilingual passenger tablets are operating in standard heritage sightseeing mode.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">SLM Latency: <strong class="text-on-surface">14ms</strong></span>
+<button class="h-9 px-space-sm rounded-lg bg-primary text-on-primary font-label-sm text-label-sm" type="button">
+          Inspect Packets
+        </button>
+</div>
+</div>
+</div>
+<!-- Vanilla JavaScript for Simulation Interactions -->
+<script>
+    (function() {
+      const btnNormal = document.getElementById('btn-state-normal');
+      const btnLandslide = document.getElementById('btn-state-landslide');
+      const btnOffline = document.getElementById('btn-state-offline');
+
+      const simIconBox = document.getElementById('sim-icon-box');
+      const simIcon = document.getElementById('sim-icon');
+      const simBadge = document.getElementById('sim-badge');
+      const simHeadline = document.getElementById('sim-headline');
+      const simDesc = document.getElementById('sim-desc');
+
+      if (!btnNormal || !btnLandslide || !btnOffline) return;
+
+      btnNormal.addEventListener('click', function() {
+        simIconBox.className = 'w-14 h-14 rounded-xl bg-secondary-container text-secondary flex items-center justify-center shrink-0';
+        simIcon.textContent = 'check_circle';
+        simBadge.className = 'font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wide';
+        simBadge.textContent = 'Active Simulation: Line Clear';
+        simHeadline.textContent = 'All Ghum–Darjeeling sections running with green signals.';
+        simDesc.textContent = 'Station PA speakers and bilingual passenger tablets are operating in standard heritage sightseeing mode.';
+      });
+
+      btnLandslide.addEventListener('click', function() {
+        simIconBox.className = 'w-14 h-14 rounded-xl bg-tertiary-fixed text-on-tertiary-container flex items-center justify-center shrink-0';
+        simIcon.textContent = 'landslide';
+        simBadge.className = 'font-label-sm text-label-sm text-on-tertiary-container font-bold uppercase tracking-wide';
+        simBadge.textContent = 'Active Simulation: Batasia Loop Obstruction';
+        simHeadline.textContent = 'Train #52541 held at Batasia Loop curve (35m Delay).';
+        simDesc.textContent = 'Emergency alternative road shuttle auto-dispatched to Station Forecourt Gate 2. Audio broadcast queued.';
+      });
+
+      btnOffline.addEventListener('click', function() {
+        simIconBox.className = 'w-14 h-14 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shrink-0';
+        simIcon.textContent = 'cell_tower';
+        simBadge.className = 'font-label-sm text-label-sm text-primary font-bold uppercase tracking-wide';
+        simBadge.textContent = 'Active Simulation: Complete Network Severed';
+        simHeadline.textContent = 'Mesh Node Switched to Autonomous 868MHz Protocol.';
+        simDesc.textContent = 'Broadcasting cached phonetic audio guides and offline refund validation forms to local smartphone web clients.';
+      });
+    })();
+  </script>
+</div></div></main><footer class="w-full bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] mt-space-2xl"><div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop py-space-xl flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex flex-col gap-1 text-center md:text-left"><div class="flex items-center justify-center md:justify-start gap-space-xs"><span class="font-headline-sm text-headline-sm text-primary">Darjeeling Himalayan Railway</span><span class="px-space-xs py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">UNESCO Inscribed 1999</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Northeast Frontier Railway (Katihar Division) • Disruption Response &amp; Multilingual Audio Guidance Protocol</p></div><div class="flex flex-wrap items-center justify-center gap-space-sm"><div class="flex items-center gap-1 px-space-sm py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm"><span class="material-symbols-outlined text-[15px] text-secondary">offline_bolt</span><span>Mesh Cache Active</span></div><span class="px-space-xs py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">v1.0 Offline-First</span></div></div></footer></body></html>

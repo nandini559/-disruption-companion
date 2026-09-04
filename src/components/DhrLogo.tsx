@@ -1,0 +1,122 @@
+export function DhrLogo({ className = "h-8 w-auto" }: { className?: string }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 120 120"
+      className={className}
+    >
+      <defs>
+        <linearGradient id="railGreenLogo" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#164A41" />
+          <stop offset="100%" stopColor="#2F6B5F" />
+        </linearGradient>
+      </defs>
+      <rect width="120" height="120" rx="28" fill="url(#railGreenLogo)" />
+      {/* Mountain silhouette backdrop */}
+      <path
+        d="M22 84 L46 48 L62 70 L82 38 L98 84 Z"
+        fill="#F7F3E8"
+        fillOpacity="0.2"
+      />
+      <path
+        d="M48 84 L64 56 L76 74 L88 52 L98 84 Z"
+        fill="#F7F3E8"
+        fillOpacity="0.15"
+      />
+      {/* Track */}
+      <line
+        x1="20"
+        y1="92"
+        x2="100"
+        y2="92"
+        stroke="#F7F3E8"
+        strokeWidth="4"
+        strokeLinecap="round"
+      />
+      <line
+        x1="28"
+        y1="88"
+        x2="28"
+        y2="96"
+        stroke="#F7F3E8"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
+      <line
+        x1="44"
+        y1="88"
+        x2="44"
+        y2="96"
+        stroke="#F7F3E8"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
+      <line
+        x1="60"
+        y1="88"
+        x2="60"
+        y2="96"
+        stroke="#F7F3E8"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
+      <line
+        x1="76"
+        y1="88"
+        x2="76"
+        y2="96"
+        stroke="#F7F3E8"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
+      <line
+        x1="92"
+        y1="88"
+        x2="92"
+        y2="96"
+        stroke="#F7F3E8"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
+      {/* Train engine */}
+      <rect x="34" y="60" width="46" height="24" rx="4" fill="#F7F3E8" />
+      <rect x="62" y="46" width="22" height="38" rx="4" fill="#F7F3E8" />
+      <rect x="66" y="52" width="14" height="10" rx="2" fill="#164A41" />
+      {/* Chimney & Steam */}
+      <rect x="40" y="48" width="8" height="12" rx="2" fill="#F7F3E8" />
+      <path d="M38 48 L50 48 L47 44 L41 44 Z" fill="#D88A16" />
+      {/* Headlamp / Cowcatcher */}
+      <circle cx="34" cy="72" r="3.5" fill="#D88A16" />
+      <polygon points="26,84 34,76 34,84" fill="#F7F3E8" />
+      {/* Wheels */}
+      <circle
+        cx="44"
+        cy="85"
+        r="6"
+        fill="#202522"
+        stroke="#F7F3E8"
+        strokeWidth="2.5"
+      />
+      <circle
+        cx="60"
+        cy="85"
+        r="6"
+        fill="#202522"
+        stroke="#F7F3E8"
+        strokeWidth="2.5"
+      />
+      <circle
+        cx="76"
+        cy="85"
+        r="6"
+        fill="#202522"
+        stroke="#F7F3E8"
+        strokeWidth="2.5"
+      />
+      {/* Gentle steam puff */}
+      <circle cx="44" cy="36" r="3.5" fill="#F7F3E8" fillOpacity="0.8" />
+      <circle cx="51" cy="30" r="5" fill="#F7F3E8" fillOpacity="0.7" />
+      <circle cx="61" cy="25" r="6.5" fill="#F7F3E8" fillOpacity="0.5" />
+    </svg>
+  );
+}

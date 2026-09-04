@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=domine:wght@100..900&amp;family=inter:wght@100..900&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {darkMode: "class", theme: {extend: {colors: {"on-tertiary": "#ffffff", "secondary-fixed-dim": "#a1d0c4", surface: "#f4fbf7", "error-container": "#ffdad6", "outline-variant": "#bbcac5", "on-tertiary-fixed": "#3c0800", "on-primary-fixed-variant": "#005045", "on-primary-fixed": "#00201b", "on-surface": "#171d1b", "surface-container": "#e9efec", "surface-container-highest": "#dee4e1", "inverse-primary": "#57dbc3", "on-primary": "#ffffff", "on-surface-variant": "#3c4946", "tertiary-fixed": "#ffdad2", "surface-bright": "#f4fbf7", "on-secondary-container": "#3e6b61", background: "#f4fbf7", primary: "#006b5c", "on-secondary": "#ffffff", "secondary-fixed": "#bdece0", "surface-variant": "#dee4e1", "on-tertiary-container": "#5f1704", outline: "#6c7a76", "on-secondary-fixed-variant": "#214e45", "surface-tint": "#006b5c", "inverse-on-surface": "#ecf2ef", "surface-container-lowest": "#ffffff", "on-error-container": "#93000a", secondary: "#3a665d", "surface-container-high": "#e3eae6", "primary-fixed": "#77f8df", "on-background": "#171d1b", "on-secondary-fixed": "#00201b", "primary-fixed-dim": "#57dbc3", "on-tertiary-fixed-variant": "#7d2c18", "tertiary-container": "#e57b60", "on-error": "#ffffff", "secondary-container": "#bae9dd", error: "#ba1a1a", "surface-container-low": "#eff5f2", tertiary: "#9c432c", "inverse-surface": "#2b3230", "surface-dim": "#d5dbd8", "tertiary-fixed-dim": "#ffb4a2", "primary-container": "#03ac96", "on-primary-container": "#003830", "tertiary-dim": "#714c00", "secondary-dim": "#664f24", "error-dim": "#70030f", "primary-dim": "#005e52"}, borderRadius: {DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px"}, spacing: {"space-xl": "2rem", "space-lg": "1.5rem", "space-sm": "0.75rem", "space-2xs": "0.25rem", "gutter-desktop": "1.5rem", "gutter-mobile": "1rem", "space-md": "1rem", "space-3xl": "4rem", "space-xs": "0.5rem", "margin-mobile": "1rem", "space-2xl": "3rem", "touch-min": "3rem", "margin-desktop": "2.5rem"}, fontFamily: {"label-md": ["inter"], "display-lg-mobile": ["domine"], "headline-lg": ["domine"], "body-sm": ["inter"], "headline-sm": ["domine"], "body-lg": ["inter"], "headline-md": ["domine"], "body-md": ["inter"], "label-lg": ["inter"], "label-sm": ["inter"], "display-lg": ["domine"], headline: ["Domine"], display: ["Domine"], body: ["Inter"], label: ["Inter"]}, fontSize: {"label-md": ["12px", {lineHeight: "16px", letterSpacing: "0.04em", fontWeight: "600"}], "display-lg-mobile": ["32px", {lineHeight: "38px", letterSpacing: "-0.01em", fontWeight: "700"}], "headline-lg": ["28px", {lineHeight: "36px", letterSpacing: "-0.01em", fontWeight: "600"}], "body-sm": ["14px", {lineHeight: "20px", letterSpacing: "0", fontWeight: "400"}], "headline-sm": ["18px", {lineHeight: "26px", letterSpacing: "0", fontWeight: "600"}], "body-lg": ["18px", {lineHeight: "28px", letterSpacing: "-0.01em", fontWeight: "400"}], "headline-md": ["22px", {lineHeight: "30px", letterSpacing: "0", fontWeight: "600"}], "body-md": ["16px", {lineHeight: "24px", letterSpacing: "0", fontWeight: "400"}], "label-lg": ["14px", {lineHeight: "20px", letterSpacing: "0.02em", fontWeight: "600"}], "label-sm": ["11px", {lineHeight: "14px", letterSpacing: "0.06em", fontWeight: "700"}], "display-lg": ["40px", {lineHeight: "48px", letterSpacing: "-0.02em", fontWeight: "700"}]}}}};</script></head><body class="bg-surface font-body-md text-body-md text-on-surface min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm shrink-0"><img alt="DHR Sahayak Heritage Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UbltWqLA9bk_WhV6CjMavZqswFiql4ZvSDeoKYxVFsBHzzr4CTGqKWImSAWIyIRVkn2yGrEFwXSr44_u2PIsdU_Zp8kEavOO-M-Lenm6kTdQrsVzrxLbA1WoAybtrXdgbwpVD1x24tSqUJpsDXo0oJc62KbsAwZY12FFIsCKyn_29iFMb5yDsMw034lcUieQcRUZPuX5iaivLdOJncuAZvzYsH4zJWgt2aKAOgK_ty6x6UtlBzm5QIkBpw"/><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">DHR Sahayak</span><span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase">Heritage Hill Rail</span></div><span class="font-label-sm text-label-sm text-on-surface-variant hidden sm:inline-block">Darjeeling Himalayan Railway • Station Disruption Companion</span></div></div><nav class="hidden xl:flex items-center gap-space-xs bg-surface-container-low p-1.5 rounded-xl shadow-[0_1px_4px_rgba(22,74,65,0.04)]" data-active-classes="bg-primary-container text-on-primary-container font-label-lg rounded-lg"><a class="px-space-sm py-2 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" data-path="home" href="#">Home</a><a aria-current="page" class="px-space-sm py-2 transition-colors bg-primary-container text-on-primary-container font-label-lg rounded-lg" data-path="staff-mode" href="#">Staff Mode</a><a class="px-space-sm py-2 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" data-path="passenger-tablet-display" href="#">Passenger Tablet Display</a><a class="px-space-sm py-2 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" data-path="passenger-mobile-qr-view" href="#">Passenger Mobile / QR View</a><a class="px-space-sm py-2 font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-colors rounded-lg" data-path="components-edge-states" href="#">Components &amp; Edge States</a></nav><div class="flex items-center gap-space-xs shrink-0"><div class="hidden md:flex items-center gap-space-xs px-space-sm py-1.5 rounded-full bg-secondary-container/60 shadow-[inset_0_1px_1px_rgba(0,0,0,0.04)]"><span class="relative flex h-2.5 w-2.5"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span><span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span></span><span class="font-label-sm text-label-sm text-on-secondary-container font-bold tracking-wide">Offline Ready</span></div><div class="hidden sm:flex items-center gap-1 px-space-sm py-1.5 rounded-full bg-surface-container-high text-on-surface"><span class="material-symbols-outlined text-[16px] text-secondary">location_on</span><span class="font-label-sm text-label-sm font-semibold">Ghum (2,258 m)</span></div><button aria-label="Station Desk Help" class="h-9 w-9 rounded-full bg-surface-container flex items-center justify-center hover:bg-surface-container-high transition-colors" title="Station Emergency Desk Help" type="button"><span class="material-symbols-outlined text-[20px] text-secondary">support_agent</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-140px)]"><div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop py-space-lg"><div class="flex flex-col w-full">
+<!-- Station Banner & Offline Mesh Status Indicator -->
+<div class="w-full bg-surface-container-high rounded-xl p-space-md mb-space-xl shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-xl bg-primary-container flex items-center justify-center text-on-primary-container shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[26px]">cell_tower</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-headline-sm text-headline-sm text-primary tracking-tight">Station Disruption Protocol Studio</span>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm">Staff Console</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+          Ghum Station (2,258 m) • Operator: <span class="font-label-sm text-on-surface font-semibold">DHR-STN-402 (Senior Station Master Desk)</span>
+</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm self-start md:self-auto shrink-0">
+<div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-lowest shadow-sm">
+<span class="h-2 w-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface">Local SLM Engine: Ready (0.8s)</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-1.5 rounded-lg bg-surface-container-lowest text-on-surface-variant shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">wifi_tethering</span>
+<span class="font-label-sm text-label-sm">Ghum Mesh Node #3</span>
+</div>
+</div>
+</div>
+<!-- Interactive 3-Step Breadcrumb Progress Bar -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md mb-space-xl shadow-sm">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Step 1 Indicator Button -->
+<button class="flex items-center gap-space-sm p-space-sm rounded-lg transition-all text-left bg-primary-container text-on-primary-container shadow-sm group" id="tab-btn-1" onclick="switchStep(1)" type="button">
+<div class="w-8 h-8 rounded-full bg-on-primary-container text-primary-container flex items-center justify-center font-label-md text-label-md font-bold shrink-0" id="badge-1">1</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-primary-container/80">Step 01</span>
+<span class="font-headline-sm text-headline-sm truncate text-on-primary-container">Select Disruption</span>
+</div>
+</button>
+<!-- Step 2 Indicator Button -->
+<button class="flex items-center gap-space-sm p-space-sm rounded-lg transition-all text-left bg-surface-container-low text-on-surface-variant hover:bg-surface-container group" id="tab-btn-2" onclick="switchStep(2)" type="button">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface font-label-md text-label-md font-bold shrink-0" id="badge-2">2</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Step 02</span>
+<span class="font-headline-sm text-headline-sm truncate text-on-surface">Incident Details</span>
+</div>
+</button>
+<!-- Step 3 Indicator Button -->
+<button class="flex items-center gap-space-sm p-space-sm rounded-lg transition-all text-left bg-surface-container-low text-on-surface-variant hover:bg-surface-container group" id="tab-btn-3" onclick="switchStep(3)" type="button">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest text-on-surface font-label-md text-label-md font-bold shrink-0" id="badge-3">3</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Step 03</span>
+<span class="font-headline-sm text-headline-sm truncate text-on-surface">Multilingual Broadcast</span>
+</div>
+</button>
+</div>
+</div>
+<!-- WORKFLOW CONTAINER -->
+<div class="w-full">
+<!-- ========================================================================= -->
+<!-- STEP 1: WHAT HAPPENED? (Disruption Archetypes Selection)                  -->
+<!-- ========================================================================= -->
+<div class="flex flex-col w-full" id="step-panel-1">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-xs">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Incident Triage Protocol</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mt-0.5">What is the incident type?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Select an archetype to auto-configure appropriate mountain passenger advisories and relief paths.</p>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant px-space-sm py-1 bg-surface-container-high rounded-full self-start md:self-auto">Ghum Sub-Division Control • Katihar NFR</span>
+</div>
+<!-- Archetype Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md mb-space-xl">
+<!-- Archetype 1: Train Delayed (Selected Demo State) -->
+<div class="archetype-card cursor-pointer p-space-lg rounded-xl bg-surface-container-lowest shadow-md transition-all relative overflow-hidden bg-gradient-to-br from-surface-container-lowest to-surface-container-low ring-2 ring-primary" data-archetype="delayed" onclick="selectArchetype(this, 'delayed')">
+<div class="absolute top-0 left-0 w-2 h-full bg-primary"></div>
+<div class="flex items-start justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[28px]">schedule</span>
+</div>
+<span class="archetype-check flex items-center justify-center w-6 h-6 rounded-full bg-primary text-on-primary">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-1">Train Delayed</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+            Service is running behind schedule due to mountain speed limits, heavy monsoon fog, or siding congestion.
+          </p>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-primary font-bold">
+<span class="material-symbols-outlined text-[16px]">hourglass_top</span>
+<span>Est. Wait Broadcast • Amenities Open</span>
+</div>
+</div>
+<!-- Archetype 2: Train Cancelled -->
+<div class="archetype-card cursor-pointer p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all relative overflow-hidden" data-archetype="cancelled" onclick="selectArchetype(this, 'cancelled')">
+<div class="absolute top-0 left-0 w-1.5 h-full bg-error"></div>
+<div class="flex items-start justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-error-container text-on-error-container flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[28px]">cancel</span>
+</div>
+<span class="archetype-check hidden items-center justify-center w-6 h-6 rounded-full bg-primary text-on-primary">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Train Cancelled</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+            Full service suspension due to rockslide, track subsidence, locomotive breakdown, or severe weather warning.
+          </p>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-error font-semibold">
+<span class="material-symbols-outlined text-[16px]">currency_rupee</span>
+<span>Immediate Full Refund Trigger</span>
+</div>
+</div>
+<!-- Archetype 3: Route Disrupted / Blocked Section -->
+<div class="archetype-card cursor-pointer p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all relative overflow-hidden" data-archetype="disrupted" onclick="selectArchetype(this, 'disrupted')">
+<div class="absolute top-0 left-0 w-1.5 h-full bg-tertiary-container"></div>
+<div class="flex items-start justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[28px]">landslide</span>
+</div>
+<span class="archetype-check hidden items-center justify-center w-6 h-6 rounded-full bg-primary text-on-primary">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Route Disrupted</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+            Section impassable between Tindharia and Kurseong; partial loop operational or terminable at Kurseong.
+          </p>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-tertiary-container font-semibold">
+<span class="material-symbols-outlined text-[16px]">alt_route</span>
+<span>Short Termination / Loop Cut</span>
+</div>
+</div>
+<!-- Archetype 4: Alternative Transport Activated -->
+<div class="archetype-card cursor-pointer p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all relative overflow-hidden" data-archetype="alternative" onclick="selectArchetype(this, 'alternative')">
+<div class="absolute top-0 left-0 w-1.5 h-full bg-secondary"></div>
+<div class="flex items-start justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[28px]">airport_shuttle</span>
+</div>
+<span class="archetype-check hidden items-center justify-center w-6 h-6 rounded-full bg-primary text-on-primary">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Alternative Road Transport</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+            Emergency Tata Sumo / Hill shuttle fleet activated from station forecourt for rapid hill passenger evacuation.
+          </p>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-secondary font-semibold">
+<span class="material-symbols-outlined text-[16px]">directions_bus</span>
+<span>Forecourt Gate Shuttles Ready</span>
+</div>
+</div>
+<!-- Archetype 5: Special Mountain Hazard / Other -->
+<div class="archetype-card cursor-pointer p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all relative overflow-hidden md:col-span-2 lg:col-span-2" data-archetype="other" onclick="selectArchetype(this, 'other')">
+<div class="absolute top-0 left-0 w-1.5 h-full bg-outline"></div>
+<div class="flex items-start justify-between mb-space-md">
+<div class="w-12 h-12 rounded-xl bg-surface-container-highest text-on-surface flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[28px]">warning</span>
+</div>
+<span class="archetype-check hidden items-center justify-center w-6 h-6 rounded-full bg-primary text-on-primary">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-1">Other Hill Hazard / Track Maintenance</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed mb-space-md">
+            Narrow-gauge track clearance, fallen pine obstruction, VIP convoy clearance, or scheduled coal bunker restock.
+          </p>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant font-semibold">
+<span class="material-symbols-outlined text-[16px]">handyman</span>
+<span>Manual Staff Advisory Template</span>
+</div>
+</div>
+</div>
+<!-- Action Footer for Step 1 -->
+<div class="flex items-center justify-between p-space-md bg-surface-container-low rounded-xl">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] text-secondary">verified_user</span>
+<span class="font-body-sm text-body-sm">Preset triggers auto-drafted for Toy Train #52541</span>
+</div>
+<button class="h-12 px-space-xl bg-primary text-on-primary rounded-lg font-label-lg text-label-lg flex items-center gap-space-xs hover:bg-primary-container transition-colors shadow-md" onclick="switchStep(2)" type="button">
+<span>Continue to Disruption Details</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- STEP 2: INCIDENT DETAILS (Structured Operator Form)                      -->
+<!-- ========================================================================= -->
+<div class="hidden flex-col w-full" id="step-panel-2">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-xs">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Input Incident Data</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mt-0.5">Disruption Specifics &amp; Passenger Relief</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Refine locomotive identity, estimated delay window, and passenger welfare arrangements.</p>
+</div>
+<button class="h-10 px-space-md bg-surface-container text-on-surface rounded-lg font-label-md text-label-md flex items-center gap-1 hover:bg-surface-container-high transition-colors self-start md:self-auto" onclick="switchStep(1)" type="button">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+<span>Back to Archetypes</span>
+</button>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl mb-space-xl">
+<!-- Form Left Column (8 cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- Card: Service & Route Selection -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<div>
+<label class="font-label-md text-label-md text-on-surface block mb-1" for="train-service-select">Select Affected Toy Train Service</label>
+<div class="relative">
+<select class="w-full h-12 bg-surface-container-low text-on-surface rounded-lg px-space-md font-body-md text-body-md appearance-none cursor-pointer focus:outline-none focus:ring-2 focus:ring-secondary" id="train-service-select">
+<option selected="" value="52541">#52541 Steam Joy Ride (Darjeeling — Ghum — Batasia Loop return)</option>
+<option value="52540">#52540 NJP — Darjeeling Heritage Passenger (Down)</option>
+<option value="52542">#52542 Darjeeling — Kurseong Diesel Safari Special</option>
+<option value="52588">#52588 Red Panda Steam Special (Darjeeling — Ghum)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-on-surface-variant pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Delay Duration Quick Selector -->
+<div>
+<span class="font-label-md text-label-md text-on-surface block mb-space-xs">Estimated Delay Duration</span>
+<div class="flex flex-wrap gap-space-xs">
+<button class="duration-pill h-10 px-space-md rounded-lg font-label-sm text-label-sm bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" onclick="selectDuration(this, '15 min')" type="button">15 min</button>
+<button class="duration-pill h-10 px-space-md rounded-lg font-label-sm text-label-sm bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" onclick="selectDuration(this, '30 min')" type="button">30 min</button>
+<button class="duration-pill h-10 px-space-md rounded-lg font-label-sm text-label-sm bg-primary text-on-primary font-bold shadow-sm" onclick="selectDuration(this, '45 min')" type="button">45 min (Active)</button>
+<button class="duration-pill h-10 px-space-md rounded-lg font-label-sm text-label-sm bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" onclick="selectDuration(this, '1 hour')" type="button">1 hour</button>
+<button class="duration-pill h-10 px-space-md rounded-lg font-label-sm text-label-sm bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" onclick="selectDuration(this, '2+ hours')" type="button">2+ hours</button>
+<button class="duration-pill h-10 px-space-md rounded-lg font-label-sm text-label-sm bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" onclick="selectDuration(this, 'Indefinite')" type="button">Indefinite / Road Only</button>
+</div>
+</div>
+<!-- Incident Narrative -->
+<div>
+<div class="flex items-center justify-between mb-1">
+<label class="font-label-md text-label-md text-on-surface" for="incident-reason">Incident Reason &amp; Official Log</label>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">auto_fix_high</span> Auto-enhanced by SLM
+                </span>
+</div>
+<textarea class="w-full bg-surface-container-low text-on-surface rounded-lg p-space-md font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-secondary leading-relaxed resize-none" id="incident-reason" rows="3">Toy Train #52541 to Darjeeling is delayed by 45 minutes due to heavy monsoon rain and track clearance near Batasia Loop.</textarea>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">This text will be parsed by the on-device AI to generate warm, empathetic passenger announcements in 4 hill languages.</p>
+</div>
+</div>
+<!-- Card: Relief Measures Toggles -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<h3 class="font-headline-sm text-headline-sm text-primary">Station Relief &amp; Passenger Welfare Directives</h3>
+<!-- Relief Toggle 1: Road Transport -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">airport_shuttle</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface block">Alternative Road Transport Arranged</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pre-arranged Sumo hill taxis from station forecourt</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="toggle-transport" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-secondary after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:border-surface-container after:border after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+</label>
+</div>
+<div class="mt-2 pl-space-lg text-on-surface-variant font-body-sm text-body-sm bg-surface-container p-space-sm rounded-lg flex items-start gap-space-xs" id="transport-detail">
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0 mt-0.5">info</span>
+<span>Shared Sumo shuttles available at Station Forecourt Gate 2 to Darjeeling Clock Tower (Standard ₹120 fare waived for ticket holders).</span>
+</div>
+</div>
+<!-- Relief Toggle 2: Refund Counter -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">payments</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface block">Refund &amp; Rebooking Counter Active</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Instant full fare waiver at station booking office</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" id="toggle-refund" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-surface peer-checked:bg-secondary after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:border-surface-container after:border after:rounded-full after:h-5 after:w-5 after:transition-all"></div>
+</label>
+</div>
+<div class="mt-2 pl-space-lg text-on-surface-variant font-body-sm text-body-sm bg-surface-container p-space-sm rounded-lg flex items-start gap-space-xs" id="refund-detail">
+<span class="material-symbols-outlined text-[18px] text-secondary shrink-0 mt-0.5">check_circle</span>
+<span>Counters 1 &amp; 2 issuing immediate cash/UPI refunds until 18:00 without standard cancellation charges.</span>
+</div>
+</div>
+<!-- Relief Toggle 3: Waiting Hall Amenities -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">coffee</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface block">Heritage Waiting Hall Heaters &amp; Tea Service</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Complimentary hot water, Darjeeling black tea, and warming stoves</span>
+</div>
+</div>
+<span class="px-space-xs py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">Standard Duty</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Real-Time SLM Preview (4 cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Real-Time SLM Generation Card -->
+<div class="p-space-lg rounded-xl bg-primary text-on-primary shadow-lg flex flex-col justify-between h-full relative overflow-hidden">
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-secondary-fixed">memory</span>
+<span class="font-label-sm text-label-sm text-secondary-fixed uppercase tracking-wider">Local SLM Engine</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-primary-container text-on-primary-container font-label-sm text-label-sm">Offline Llama 3B-DHR</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-primary mb-1">Synthesizing Mountain Speech</h4>
+<p class="font-body-sm text-body-sm text-on-primary-container">
+                  Extracts passenger reassurance cues, landmark references (Batasia, Forecourt Gate 2), and generates authentic phonetic phrases for hill accents.
+                </p>
+</div>
+<!-- SLM Context Inspector Box -->
+<div class="bg-primary-container/80 rounded-lg p-space-md font-body-sm text-body-sm text-on-primary space-y-2">
+<div class="flex items-center justify-between text-on-primary-container font-label-sm text-label-sm">
+<span>INPUT TOKENS</span>
+<span>148 tokens</span>
+</div>
+<div class="font-label-sm text-label-sm text-secondary-fixed">Target Languages:</div>
+<div class="grid grid-cols-2 gap-1 text-on-primary text-xs">
+<div class="flex items-center gap-1"><span>🇬🇧</span> English (Clear Voice)</div>
+<div class="flex items-center gap-1"><span>🇮🇳</span> हिन्दी (Station Formal)</div>
+<div class="flex items-center gap-1"><span>🇳🇵</span> नेपाली (Eastern Hills)</div>
+<div class="flex items-center gap-1"><span>🇧🇩</span> বাংলা (Kolkata Transit)</div>
+</div>
+<div class="pt-2">
+<div class="h-1.5 w-full bg-primary rounded-full overflow-hidden">
+<div class="h-full bg-secondary-fixed w-full"></div>
+</div>
+<div class="flex justify-between items-center text-[10px] text-on-primary-container mt-1 font-label-sm">
+<span>Model: Ready</span>
+<span>Latency: 840ms</span>
+</div>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-highest/10 text-on-primary-container text-xs flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Includes acoustic Chime sequence: Ghum Station Heritage Gong</span>
+</div>
+</div>
+<!-- Trigger Button to Generate -->
+<div class="pt-space-md mt-space-md">
+<button class="w-full h-12 bg-secondary-fixed text-on-secondary-fixed font-label-lg text-label-lg rounded-lg flex items-center justify-center gap-space-xs hover:bg-secondary-fixed-dim transition-all shadow-md" id="btn-compile" onclick="generateAnnouncement()" type="button">
+<span class="material-symbols-outlined text-[20px]">auto_awesome</span>
+<span>Generate Passenger Broadcast</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- STEP 3: GENERATED PASSENGER ANNOUNCEMENT & MULTILINGUAL CONTROL CENTER    -->
+<!-- ========================================================================= -->
+<div class="hidden flex-col w-full" id="step-panel-3">
+<!-- Success Banner -->
+<div class="w-full bg-secondary-container text-on-secondary-container p-space-md rounded-xl mb-space-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm shadow-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</div>
+<div>
+<span class="font-label-lg text-label-lg font-bold block">Announcement Synthesized &amp; Verified Offline</span>
+<span class="font-body-sm text-body-sm text-on-secondary-container">Ready for multi-channel broadcast across Ghum Station, platform tablets, and passenger QR hubs.</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0 self-end sm:self-auto">
+<span class="font-label-sm text-label-sm px-space-xs py-1 rounded bg-surface-container-lowest text-on-surface font-semibold">Mesh Hash #DHR-882</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl mb-space-xl">
+<!-- Main Heritage Announcement Preview Board (8 Cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<!-- Heritage Railway Station Notice Board Card -->
+<div class="p-space-xl rounded-xl bg-surface-container-lowest shadow-md relative overflow-hidden">
+<!-- Authentic Enameled Top Accent Bar -->
+<div class="absolute top-0 left-0 w-full h-2.5 bg-gradient-to-r from-tertiary via-tertiary-container to-secondary"></div>
+<!-- Station Header Plaque -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-space-md mb-space-lg gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="px-space-sm py-1 rounded bg-tertiary-container text-on-tertiary font-label-md text-label-md uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span> TRAIN DELAYED
+                </span>
+<span class="font-headline-sm text-headline-sm text-primary">DHR #52541 Joy Ride</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">update</span>
+<span>Logged at 14:10 IST • Ghum Station</span>
+</div>
+</div>
+<!-- Prominent Announcement Headline -->
+<div class="mb-space-lg">
+<h1 class="font-display-lg text-headline-lg lg:text-display-lg text-primary leading-tight font-bold mb-space-sm" id="announcement-headline">
+                Your Toy Train to Darjeeling is delayed by approximately 45 minutes due to heavy monsoon rain.
+              </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed" id="announcement-subtext">
+                Track clearing operations are actively underway near Batasia Loop. Steam locomotive 779 'Himalayan Bird' remains under steam with passenger safety prioritised.
+              </p>
+</div>
+<!-- Actionable Steps ("What should passengers do?") -->
+<div class="p-space-lg rounded-xl bg-surface-container-low mb-space-lg">
+<div class="flex items-center gap-space-xs mb-space-md">
+<span class="material-symbols-outlined text-secondary text-[22px]">assistant_navigation</span>
+<span class="font-headline-sm text-headline-sm text-primary">What Should Passengers Do Right Now?</span>
+</div>
+<ol class="flex flex-col gap-space-sm font-body-md text-body-md text-on-surface">
+<li class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm shrink-0 mt-0.5 font-bold">1</span>
+<span>Please stay warm and dry in the <strong>Ghum Heritage Waiting Hall</strong>. Complimentary hot Himalayan black tea and heated stoves are active.</span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm shrink-0 mt-0.5 font-bold">2</span>
+<span>The next official audio status broadcast will sound across platforms in <strong>20 minutes at 14:30</strong>.</span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-sm text-label-sm shrink-0 mt-0.5 font-bold">3</span>
+<span>Urgent travelers may board complimentary shared <strong>Tata Sumo shuttles at Forecourt Gate 2</strong> directly to Darjeeling Clock Tower.</span>
+</li>
+<li class="flex items-start gap-space-sm">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-sm text-label-sm shrink-0 mt-0.5 font-bold">4</span>
+<span>Full fare refund without cancellation fees is available immediately at <strong>Booking Counter 1</strong>.</span>
+</li>
+</ol>
+</div>
+<!-- Audio Waveform Player Widget (Station Heritage Gong Pre-roll) -->
+<div class="p-space-md rounded-xl bg-surface-container-high flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<button class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-colors shadow-sm" id="play-pause-btn" onclick="toggleAudioPreview()" type="button">
+<span class="material-symbols-outlined text-[24px]" id="play-icon">play_arrow</span>
+</button>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Audio Broadcast Preview (Ghum Station Gong + TTS)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant" id="audio-lang-indicator">Voice: English (India Heritage Clear) • 00:34 duration</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface font-label-sm text-label-sm">1.0x</span>
+<button class="h-8 w-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-highest" title="High volume test" type="button">
+<span class="material-symbols-outlined text-[18px]">volume_up</span>
+</button>
+</div>
+</div>
+<!-- Stylized Gauge Scrub Bar -->
+<div class="w-full flex items-center gap-2 pt-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant">0:00</span>
+<div class="relative flex-1 h-2 bg-surface-container-highest rounded-full overflow-hidden cursor-pointer">
+<div class="h-full bg-primary w-1/3 transition-all" id="audio-progress"></div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">0:34</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Translation Switcher & Multilingual Script Inspection (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Language Tabs Card -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-primary">Hill Languages</h3>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container">4 Scripts Ready</span>
+</div>
+<!-- Segmented Pill Language Switcher -->
+<div class="grid grid-cols-2 gap-1.5 p-1 bg-surface-container-low rounded-xl">
+<button class="lang-tab-btn py-2 px-space-sm rounded-lg font-label-md text-label-md flex items-center justify-center gap-1 bg-primary text-on-primary shadow-sm transition-all" onclick="setPreviewLanguage('en', this)" type="button">
+<span>🇬🇧</span>
+<span>English</span>
+</button>
+<button class="lang-tab-btn py-2 px-space-sm rounded-lg font-label-md text-label-md flex items-center justify-center gap-1 text-on-surface hover:bg-surface-container transition-all" onclick="setPreviewLanguage('hi', this)" type="button">
+<span>🇮🇳</span>
+<span>हिन्दी (Hindi)</span>
+</button>
+<button class="lang-tab-btn py-2 px-space-sm rounded-lg font-label-md text-label-md flex items-center justify-center gap-1 text-on-surface hover:bg-surface-container transition-all" onclick="setPreviewLanguage('ne', this)" type="button">
+<span>🇳🇵</span>
+<span>नेपाली (Nepali)</span>
+</button>
+<button class="lang-tab-btn py-2 px-space-sm rounded-lg font-label-md text-label-md flex items-center justify-center gap-1 text-on-surface hover:bg-surface-container transition-all" onclick="setPreviewLanguage('bn', this)" type="button">
+<span>🇧🇩</span>
+<span>বাংলা (Bengali)</span>
+</button>
+</div>
+<!-- Script Translation Detail Box -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-sm min-h-[190px]" id="script-preview-box">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider" id="script-name-badge">English (Universal Transit)</span>
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">record_voice_over</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface leading-relaxed italic" id="script-translated-text">
+                "Attention valued passengers: Joy Ride Service #52541 is delayed by 45 minutes due to heavy monsoon rain near Batasia Loop. Please proceed to the heated Ghum Waiting Hall."
+              </p>
+<div class="mt-auto pt-2 flex items-center justify-between text-on-surface-variant text-xs">
+<span class="font-label-sm text-label-sm text-secondary font-medium" id="script-quality-badge">Native Hill Phrasing • Level 1 Verified</span>
+<button class="text-primary hover:underline font-label-sm text-label-sm flex items-center gap-1" onclick="copyTranslation()" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span> Copy
+                </button>
+</div>
+</div>
+</div>
+<!-- Station QR Billboard Preview Card -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-primary">Station QR Billboard</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Platform Sync</span>
+</div>
+<div class="flex items-center gap-space-md p-space-sm bg-surface-container-low rounded-lg">
+<!-- Inline QR Visual -->
+<div class="w-16 h-16 bg-surface-container-lowest p-1 rounded-lg shrink-0 shadow-sm flex items-center justify-center">
+<svg class="w-full h-full text-primary" fill="currentColor" viewbox="0 0 100 100">
+<rect height="30" rx="4" width="30" x="0" y="0"></rect>
+<rect fill="white" height="18" width="18" x="6" y="6"></rect>
+<rect height="10" width="10" x="10" y="10"></rect>
+<rect height="30" rx="4" width="30" x="70" y="0"></rect>
+<rect fill="white" height="18" width="18" x="76" y="6"></rect>
+<rect height="10" width="10" x="80" y="10"></rect>
+<rect height="30" rx="4" width="30" x="0" y="70"></rect>
+<rect fill="white" height="18" width="18" x="6" y="76"></rect>
+<rect height="10" width="10" x="10" y="80"></rect>
+<rect height="24" width="8" x="36" y="6"></rect>
+<rect height="8" width="14" x="48" y="12"></rect>
+<rect height="24" width="28" x="36" y="38"></rect>
+<rect height="10" width="22" x="70" y="42"></rect>
+<rect height="28" width="10" x="70" y="62"></rect>
+<rect height="16" width="8" x="86" y="74"></rect>
+<rect height="18" width="18" x="42" y="72"></rect>
+</svg>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Ghum Portal Live QR</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">dhr-mesh.local/stn/ghum-52541</span>
+<span class="font-label-sm text-label-sm text-secondary mt-1">Allows phone reading without 4G</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Control Center Toolbar (High Priority Staff Commands) -->
+<div class="w-full p-space-lg rounded-xl bg-surface-container-high shadow-md flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-md">
+<!-- Left Quick Toggles -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="h-12 px-space-md bg-surface-container-lowest text-on-surface rounded-lg font-label-md text-label-md flex items-center gap-1.5 hover:bg-surface-container transition-colors shadow-sm" onclick="switchStep(2)" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+<span>Edit Specifics</span>
+</button>
+<button class="h-12 px-space-md bg-surface-container-lowest text-on-surface rounded-lg font-label-md text-label-md flex items-center gap-1.5 hover:bg-surface-container transition-colors shadow-sm" onclick="regenerateAI()" type="button">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+<span>Regenerate with AI</span>
+</button>
+<button class="h-12 px-space-md bg-surface-container-lowest text-on-surface rounded-lg font-label-md text-label-md flex items-center gap-1.5 hover:bg-surface-container transition-colors shadow-sm" onclick="openQRModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">qr_code_2</span>
+<span>Station QR Billboard</span>
+</button>
+</div>
+<!-- Right Primary Actions -->
+<div class="flex flex-col sm:flex-row items-center gap-space-sm">
+<button class="w-full sm:w-auto h-12 px-space-lg bg-surface-container-lowest text-primary rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-space-xs hover:bg-secondary-container transition-all shadow-sm" id="btn-kiosk" onclick="pushToTablets()" type="button">
+<span class="material-symbols-outlined text-[20px]">tablet_mac</span>
+<span>Push Live to Passenger Tablet Kiosks</span>
+</button>
+<button class="w-full sm:w-auto h-12 px-space-xl bg-primary text-on-primary rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-space-xs hover:bg-primary-container transition-all shadow-md" id="btn-broadcast" onclick="broadcastLive()" type="button">
+<span class="material-symbols-outlined text-[20px]">campaign</span>
+<span>Broadcast to Station PA</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Toast Notification System (Offline Mesh Feedback) -->
+<div class="fixed bottom-6 right-6 z-50 bg-primary text-on-primary px-space-lg py-space-md rounded-xl shadow-xl flex items-center gap-space-sm transition-all duration-300 opacity-0 pointer-events-none translate-y-4" id="toast">
+<span class="material-symbols-outlined text-[22px] text-secondary-fixed" id="toast-icon">check_circle</span>
+<span class="font-body-md text-body-md font-medium" id="toast-message">Broadcast transmitted across Ghum Station speakers!</span>
+</div>
+</div>
+<script>
+  // Step Navigation Logic
+  function switchStep(stepNum) {
+    // Hide all step panels
+    document.getElementById('step-panel-1').classList.add('hidden');
+    document.getElementById('step-panel-2').classList.add('hidden');
+    document.getElementById('step-panel-3').classList.add('hidden');
+
+    // Show selected step panel
+    const currentPanel = document.getElementById('step-panel-' + stepNum);
+    currentPanel.classList.remove('hidden');
+
+    // Update Navigation Tab Buttons
+    for (let i = 1; i <= 3; i++) {
+      const tabBtn = document.getElementById('tab-btn-' + i);
+      const badge = document.getElementById('badge-' + i);
+      
+      if (i === stepNum) {
+        tabBtn.className = "flex items-center gap-space-sm p-space-sm rounded-lg transition-all text-left bg-primary-container text-on-primary-container shadow-sm group";
+        badge.className = "w-8 h-8 rounded-full bg-on-primary-container text-primary-container flex items-center justify-center font-label-md text-label-md font-bold shrink-0";
+      } else if (i < stepNum) {
+        tabBtn.className = "flex items-center gap-space-sm p-space-sm rounded-lg transition-all text-left bg-secondary-container text-on-secondary-container hover:bg-secondary-container/80 group";
+        badge.className = "w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-md text-label-md font-bold shrink-0";
+      } else {
+        tabBtn.className = "flex items-center gap-space-sm p-space-sm rounded-lg transition-all text-left bg-surface-container-low text-on-surface-variant hover:bg-surface-container group";
+        badge.className = "w-8 h-8 rounded-full bg-surface-container-highest text-on-surface font-label-md text-label-md font-bold shrink-0";
+      }
+    }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Step 1: Disruption Archetype Selector
+  function selectArchetype(element, archetypeKey) {
+    const cards = document.querySelectorAll('.archetype-card');
+    cards.forEach(card => {
+      card.classList.remove('ring-2', 'ring-primary', 'bg-gradient-to-br', 'from-surface-container-lowest', 'to-surface-container-low', 'shadow-md');
+      card.classList.add('shadow-sm');
+      const check = card.querySelector('.archetype-check');
+      if (check) check.classList.add('hidden');
+    });
+
+    element.classList.add('ring-2', 'ring-primary', 'bg-gradient-to-br', 'from-surface-container-lowest', 'to-surface-container-low', 'shadow-md');
+    element.classList.remove('shadow-sm');
+    const activeCheck = element.querySelector('.archetype-check');
+    if (activeCheck) activeCheck.classList.remove('hidden');
+
+    // Auto-update sample reason in Step 2 based on selection
+    const reasonBox = document.getElementById('incident-reason');
+    if (archetypeKey === 'cancelled') {
+      reasonBox.value = "Toy Train #52541 Joy Ride cancelled today due to fallen boulder near Batasia Loop. Complete refund active.";
+    } else if (archetypeKey === 'disrupted') {
+      reasonBox.value = "Section blocked between Ghum and Kurseong. Joy rides terminating at Batasia Loop and returning to Darjeeling.";
+    } else if (archetypeKey === 'alternative') {
+      reasonBox.value = "Locomotive undergoing steam tube repairs. Road transit shuttles activated from Forecourt Gate 2 to Darjeeling.";
+    } else {
+      reasonBox.value = "Toy Train #52541 to Darjeeling is delayed by 45 minutes due to heavy monsoon rain and track clearance near Batasia Loop.";
+    }
+  }
+
+  // Step 2: Delay Duration Pills
+  function selectDuration(button, durationText) {
+    const pills = document.querySelectorAll('.duration-pill');
+    pills.forEach(p => {
+      p.className = "duration-pill h-10 px-space-md rounded-lg font-label-sm text-label-sm bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors";
+    });
+    button.className = "duration-pill h-10 px-space-md rounded-lg font-label-sm text-label-sm bg-primary text-on-primary font-bold shadow-sm";
+  }
+
+  // Step 2: Compile & Progress to Step 3
+  function generateAnnouncement() {
+    const btn = document.getElementById('btn-compile');
+    btn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-spin">progress_activity</span><span>Compiling Local SLM...</span>';
+    setTimeout(() => {
+      btn.innerHTML = '<span class="material-symbols-outlined text-[20px]">auto_awesome</span><span>Generate Passenger Broadcast</span>';
+      switchStep(3);
+      showToast('Multilingual hill announcement drafted successfully!');
+    }, 600);
+  }
+
+  // Step 3: Multilingual Script Switcher
+  const translations = {
+    'en': {
+      name: "English (Universal Transit)",
+      headline: "Your Toy Train to Darjeeling is delayed by approximately 45 minutes due to heavy monsoon rain.",
+      subtext: "Track clearing operations are actively underway near Batasia Loop. Steam locomotive 779 'Himalayan Bird' remains under steam with passenger safety prioritised.",
+      snippet: "Attention valued passengers: Joy Ride Service #52541 is delayed by 45 minutes due to heavy monsoon rain near Batasia Loop. Please proceed to the heated Ghum Waiting Hall.",
+      voice: "Voice: English (India Heritage Clear) • 00:34 duration",
+      badge: "Native Hill Phrasing • Level 1 Verified"
+    },
+    'hi': {
+      name: "हिन्दी (Station Formal Hindi)",
+      headline: "दार्जिलिंग जाने वाली टॉय ट्रेन भारी मानसूनी बारिश के कारण लगभग 45 मिनट की देरी से चल रही है।",
+      subtext: "बतासिया लूप के पास ट्रैक सफाई का कार्य युद्धस्तर पर जारी है। हेरिटेज स्टीम इंजन 779 सुरक्षित स्थिति में है। कृपया प्रतीक्षालय में पधारें।",
+      snippet: "यात्रीगण कृपया ध्यान दें: टॉय ट्रेन संख्या 52541 बतासिया लूप के पास भारी बारिश के चलते 45 मिनट विलंब से चलेगी। कृपया घूम स्टेशन के गर्म प्रतीक्षालय में आराम करें।",
+      voice: "ध्वनि: हिन्दी (आकाशवाणी स्टेशन उद्घोषक) • 00:38 duration",
+      badge: "भारतीय रेल मानक शब्दावली प्रमाणित"
+    },
+    'ne': {
+      name: "नेपाली (Eastern Hills Phrasing)",
+      headline: "दार्जिलिङ जाने टोय ट्रेन भारी वर्षा र ट्रयाक सफाइका कारण लगभग ४५ मिनेट ढिलो भएको छ।",
+      subtext: "बतासिया लूप छेउमा रेलमार्ग सफा गर्ने काम भइरहेको छ। यात्रुहरूको सुरक्षालाई प्राथमिकता दिइएको छ। कृपया घाम स्टेसनको न्यानो प्रतीक्षालयमा बस्नुहोला।",
+      snippet: "आदरणीय यात्रु महानुभावहरू, भारी वर्षाका कारण दार्जिलिङ जाने टोय ट्रेन नं ५२५४१ लगभग ४५ मिनेट ढिलाइ हुने भएको छ। स्टेशन प्रतीक्षालयमा तातो चियाको व्यवस्था छ।",
+      voice: "आवाज: नेपाली (पहाडी लयात्मक स्वर) • 00:36 duration",
+      badge: "दार्जिलिङ पहाडी बोली प्रमाणीकरण सम्पन्न"
+    },
+    'bn': {
+      name: "বাংলা (Kolkata & North Bengal Transit)",
+      headline: "ভারী বৃষ্টি ও ট্র্যাক পরিষ্কারের কারণে দার্জিলিংগামী টয় ট্রেন প্রায় ৪৫ মিনিট দেরিতে চলছে।",
+      subtext: "বাতাসিয়া লুপের কাছে দ্রুত রেললাইন স্বাভাবিক করার কাজ চলছে। সকল যাত্রীদের সুরক্ষার স্বার্থে ঘুম হেরিটেজ ওয়েটিং হলে গরম পানীয়ের ব্যবস্থা করা হয়েছে।",
+      snippet: "সকল যাত্রীদের জানানো যাচ্ছে: প্রবল বৃষ্টির কারণে বাতাসিয়া লুপে ট্র্যাক পরিদর্শনের জন্য ৫২৫৪১ জয় রাইড ট্রেনটি ৪৫ মিনিট বিলম্বে ছাড়বে। ১ নম্বর কাউন্টারে সম্পূর্ণ রিফান্ড সুবিধা উপলব্ধ।",
+      voice: "কণ্ঠ: বাংলা (স্পষ্ট প্রমিত উচ্চারণ) • 00:35 duration",
+      badge: "উত্তরবঙ্গ রেল বিভাগ অনুমোদিত"
+    }
+  };
+
+  function setPreviewLanguage(langKey, btnElement) {
+    // Update tab styles
+    const tabButtons = document.querySelectorAll('.lang-tab-btn');
+    tabButtons.forEach(btn => {
+      btn.className = "lang-tab-btn py-2 px-space-sm rounded-lg font-label-md text-label-md flex items-center justify-center gap-1 text-on-surface hover:bg-surface-container transition-all";
+    });
+    btnElement.className = "lang-tab-btn py-2 px-space-sm rounded-lg font-label-md text-label-md flex items-center justify-center gap-1 bg-primary text-on-primary shadow-sm transition-all";
+
+    // Update text in preview card
+    const data = translations[langKey];
+    document.getElementById('announcement-headline').textContent = data.headline;
+    document.getElementById('announcement-subtext').textContent = data.subtext;
+    document.getElementById('script-name-badge').textContent = data.name;
+    document.getElementById('script-translated-text').textContent = `"${data.snippet}"`;
+    document.getElementById('script-quality-badge').textContent = data.badge;
+    document.getElementById('audio-lang-indicator').textContent = data.voice;
+  }
+
+  // Audio Playback Preview Simulation
+  let isPlaying = false;
+  function toggleAudioPreview() {
+    isPlaying = !isPlaying;
+    const playIcon = document.getElementById('play-icon');
+    const progressBar = document.getElementById('audio-progress');
+
+    if (isPlaying) {
+      playIcon.textContent = 'pause';
+      progressBar.classList.add('w-full');
+      progressBar.classList.remove('w-1/3');
+      showToast('Playing simulated station chime + audio stream...');
+    } else {
+      playIcon.textContent = 'play_arrow';
+      progressBar.classList.remove('w-full');
+      progressBar.classList.add('w-1/3');
+    }
+  }
+
+  // Staff Broadcast Actions
+  function broadcastLive() {
+    const btn = document.getElementById('btn-broadcast');
+    const originalText = btn.innerHTML;
+    btn.innerHTML = '<span class="material-symbols-outlined text-[20px] animate-pulse">sensors</span><span>Transmitting to Speakers...</span>';
+    setTimeout(() => {
+      btn.innerHTML = originalText;
+      showToast('✓ Broadcast active on Ghum Platform 1, 2 & Forecourt!');
+    }, 900);
+  }
+
+  function pushToTablets() {
+    const btn = document.getElementById('btn-kiosk');
+    btn.innerHTML = '<span class="material-symbols-outlined text-[20px] text-secondary">sync</span><span>Syncing Mesh...</span>';
+    setTimeout(() => {
+      btn.innerHTML = '<span class="material-symbols-outlined text-[20px]">tablet_mac</span><span>Pushed to 4 Station Tablets</span>';
+      showToast('Synced to Station Tablets & Kiosks via Mesh #3');
+    }, 750);
+  }
+
+  function regenerateAI() {
+    showToast('Re-running on-device SLM with high-politeness tone...');
+  }
+
+  function openQRModal() {
+    showToast('QR Code generated for Platform Display Billboard');
+  }
+
+  function copyTranslation() {
+    showToast('Text copied to clipboard!');
+  }
+
+  // Toast System
+  function showToast(msg) {
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toast-message');
+    toastMsg.textContent = msg;
+    toast.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+    toast.classList.add('opacity-100', 'translate-y-0');
+
+    setTimeout(() => {
+      toast.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+      toast.classList.remove('opacity-100', 'translate-y-0');
+    }, 2800);
+  }
+</script></div></main><footer class="w-full bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] mt-space-2xl"><div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop py-space-xl flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex flex-col gap-1 text-center md:text-left"><div class="flex items-center justify-center md:justify-start gap-space-xs"><span class="font-headline-sm text-headline-sm text-primary">Darjeeling Himalayan Railway</span><span class="px-space-xs py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">UNESCO Inscribed 1999</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Northeast Frontier Railway (Katihar Division) • Disruption Response &amp; Multilingual Audio Guidance Protocol</p></div><div class="flex flex-wrap items-center justify-center gap-space-sm"><div class="flex items-center gap-1 px-space-sm py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm"><span class="material-symbols-outlined text-[15px] text-secondary">offline_bolt</span><span>Mesh Cache Active</span></div><span class="px-space-xs py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">v1.0 Offline-First</span></div></div></footer></body></html>
