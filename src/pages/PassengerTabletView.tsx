@@ -89,8 +89,8 @@ export function PassengerTabletView({ activeDisruption }: PassengerTabletViewPro
             <span className="font-headline-sm text-headline-sm uppercase tracking-wider text-secondary-fixed font-bold">
               Live Station Update
             </span>
-            <span className="font-headline-sm text-headline-sm text-on-primary font-bold ml-space-xs">
-              • Ghum Railway Station (2,258 m)
+            <span className="font-headline-sm text-headline-sm text-on-primary font-bold sm:ml-space-xs block sm:inline">
+              Ghum Railway Station (2,258 m)
             </span>
           </div>
         </div>
@@ -223,7 +223,7 @@ export function PassengerTabletView({ activeDisruption }: PassengerTabletViewPro
 
           {/* Main Announcement Text */}
           <div className="space-y-space-md py-space-xs">
-            <h1 className="font-display-lg text-display-lg text-primary leading-tight font-bold">
+            <h1 className="font-display-lg text-2xl sm:text-3xl lg:text-display-lg text-primary leading-tight font-bold">
               {currentExplanation.explanation}
             </h1>
             <div className="inline-flex items-center gap-space-sm bg-error-container text-on-error-container px-space-md py-space-sm rounded-xl">
@@ -241,7 +241,7 @@ export function PassengerTabletView({ activeDisruption }: PassengerTabletViewPro
 
           {/* Quick Audio Companion Player Widget (Real Web Speech) */}
           <div className="bg-surface-container p-space-md rounded-xl flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-md">
-            <div className="flex items-center gap-space-md">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-space-md">
               <button
                 onClick={handleToggleSpeech}
                 type="button"

@@ -53,7 +53,7 @@ export function Header({ activeTab, setActiveTab }: HeaderProps) {
                 {/* Brand logo & title */}
                 <button
                     type="button"
-                    className="flex items-center gap-space-sm shrink-0 min-w-0 cursor-pointer text-left rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
+                    className="flex items-center gap-space-sm min-w-0 flex-1 lg:flex-1 cursor-pointer text-left rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
                     onClick={() => handleSelect("home")}
                     aria-label="Go to home"
                 >
@@ -73,8 +73,8 @@ export function Header({ activeTab, setActiveTab }: HeaderProps) {
                     </div>
                 </button>
 
-                {/* Desktop navigation tabs */}
-                <nav className="hidden lg:flex items-center gap-space-2xs bg-surface-container-low p-1.5 rounded-xl shadow-[0_1px_4px_rgba(22,74,65,0.04)]">
+                {/* Desktop navigation tabs (centered) */}
+                <nav className="hidden lg:flex shrink-0 items-center gap-space-2xs bg-surface-container-low p-1.5 rounded-xl shadow-[0_1px_4px_rgba(22,74,65,0.04)]">
                     {TABS.map((tab) => {
                         const isActive = activeTab === tab.key;
                         return (
@@ -95,7 +95,7 @@ export function Header({ activeTab, setActiveTab }: HeaderProps) {
                 </nav>
 
                 {/* Top right actions / badges */}
-                <div className="flex items-center gap-space-xs shrink-0">
+                <div className="flex flex-1 items-center justify-end gap-space-xs">
                     <div className="hidden xl:flex items-center gap-space-xs px-space-sm py-1.5 rounded-full bg-secondary-container/60 shadow-[inset_0_1px_1px_rgba(0,0,0,0.04)]">
                         <span className="relative flex h-2.5 w-2.5">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>

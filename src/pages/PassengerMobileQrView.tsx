@@ -110,7 +110,7 @@ export function PassengerMobileQrView({ activeDisruption }: PassengerMobileQrVie
               {/* QR Container */}
               <div className="bg-surface-container-low rounded-xl p-space-md flex flex-col items-center justify-center relative shadow-sm">
                 <div className="bg-surface-container-lowest p-space-md rounded-xl shadow-md flex flex-col items-center justify-center relative">
-                  <div className="relative w-56 h-56 flex items-center justify-center">
+                  <div className="relative w-48 h-48 sm:w-56 sm:h-56 max-w-full flex items-center justify-center">
                     <svg
                       className="w-full h-full text-primary"
                       fill="currentColor"
