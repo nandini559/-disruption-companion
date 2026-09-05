@@ -160,7 +160,7 @@ export function ComponentsEdgeStatesView() {
               </span>
             </div>
 
-            <button
+            {/* <button
               type="button"
               className="w-full h-11 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-bold flex items-center justify-center gap-1.5 hover:bg-primary-container transition-colors shadow-sm"
             >
@@ -168,7 +168,7 @@ export function ComponentsEdgeStatesView() {
                 receipt_long
               </span>
               Generate PNR Voucher
-            </button>
+            </button> */}
           </div>
 
           {/* MODAL 2: Emergency Transport */}
@@ -232,7 +232,7 @@ export function ComponentsEdgeStatesView() {
               </span>
             </div>
 
-            <button
+            {/* <button
               type="button"
               className="w-full h-11 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md font-bold flex items-center justify-center gap-1.5 hover:bg-secondary-container transition-colors shadow-sm"
             >
@@ -240,7 +240,7 @@ export function ComponentsEdgeStatesView() {
                 directions_bus
               </span>
               View Route &amp; Assistance Staff
-            </button>
+            </button> */}
           </div>
 
           {/* MODAL 3: Offline Node Health */}
@@ -320,7 +320,7 @@ export function ComponentsEdgeStatesView() {
               </span>
             </div>
 
-            <button
+            {/* <button
               type="button"
               className="w-full h-11 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md font-bold flex items-center justify-center gap-1.5 hover:bg-primary transition-colors hover:text-on-primary shadow-sm"
             >
@@ -328,7 +328,7 @@ export function ComponentsEdgeStatesView() {
                 restart_alt
               </span>
               Trigger Manual Sync Mesh
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
