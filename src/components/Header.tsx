@@ -96,7 +96,7 @@ export function Header({ activeTab, setActiveTab }: HeaderProps) {
 
                 {/* Top right actions / badges */}
                 <div className="flex flex-1 items-center justify-end gap-space-xs">
-                    <div className="hidden xl:flex items-center gap-space-xs px-space-sm py-1.5 rounded-full bg-secondary-container/60 shadow-[inset_0_1px_1px_rgba(0,0,0,0.04)]">
+                    <div className="hidden xl:flex shrink-0 items-center gap-space-xs px-space-sm py-1.5 rounded-full bg-secondary-container/60 shadow-[inset_0_1px_1px_rgba(0,0,0,0.04)]">
                         <span className="relative flex h-2.5 w-2.5">
                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
                             <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-secondary"></span>
@@ -106,7 +106,7 @@ export function Header({ activeTab, setActiveTab }: HeaderProps) {
                         </span>
                     </div>
 
-                    <div className="hidden xl:flex items-center gap-1 px-space-sm py-1.5 rounded-full bg-surface-container-high text-on-surface">
+                    <div className="hidden xl:flex shrink-0 items-center gap-1 px-space-sm py-1.5 rounded-full bg-surface-container-high text-on-surface">
                         <span className="material-symbols-outlined text-[16px] text-secondary">
                             location_on
                         </span>
