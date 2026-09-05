@@ -33,8 +33,8 @@ export function App() {
   return (
     <div className="min-h-screen bg-surface font-body-md text-body-md text-on-surface flex flex-col">
       <Header activeTab={activeTab} setActiveTab={setActiveTab} />
-      <main className="w-full pt-20 bg-surface min-h-[calc(100vh-140px)] flex-1">
-        <div className="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop py-space-lg">
+      <main className="w-full pt-16 md:pt-20 bg-surface min-h-[calc(100vh-140px)] flex-1">
+        <div className="max-w-7xl mx-auto px-margin-mobile lg:px-margin-desktop py-space-md md:py-space-lg">
           {activeTab === "home" && <HomeView onNavigate={setActiveTab} />}
           {activeTab === "staff-mode" && (
             <StaffModeView
