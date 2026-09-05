@@ -43,7 +43,7 @@ export function HomeView({ onNavigate }: HomeViewProps) {
               <span className="font-label-md text-label-md uppercase text-secondary font-bold tracking-widest">
                 Katihar Hill Division • Sahayak Companion
               </span>
-              <h1 className="font-display-lg text-display-lg text-primary tracking-tight font-bold">
+              <h1 className="font-display-lg text-3xl sm:text-4xl lg:text-display-lg text-primary tracking-tight font-bold leading-tight">
                 Clear guidance when your journey changes.
               </h1>
               <p className="font-body-lg text-body-lg text-on-surface-variant max-w-3xl">

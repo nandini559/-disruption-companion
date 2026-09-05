@@ -65,7 +65,7 @@ export function ComponentsEdgeStatesView() {
 
       {/* SECTION 1: System Dialogs & Operational Overlays */}
       <div className="flex flex-col gap-space-md mb-space-3xl">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
           <div className="flex items-center gap-space-xs">
             <span className="w-2.5 h-6 rounded bg-primary"></span>
             <h2 className="font-headline-md text-headline-md text-primary font-bold">
@@ -335,7 +335,7 @@ export function ComponentsEdgeStatesView() {
 
       {/* SECTION 2: Edge & Exception States Catalog */}
       <div className="flex flex-col gap-space-md mb-space-2xl">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
           <div className="flex items-center gap-space-xs">
             <span className="w-2.5 h-6 rounded bg-secondary"></span>
             <h2 className="font-headline-md text-headline-md text-primary font-bold">
@@ -349,9 +349,9 @@ export function ComponentsEdgeStatesView() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-space-md">
           {/* Card Alpha */}
-          <div className="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+          <div className="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
             <div className="flex items-center gap-space-sm">
-              <div className="w-3 h-3 rounded-full bg-secondary"></div>
+              <div className="w-3 h-3 rounded-full bg-secondary shrink-0"></div>
               <div>
                 <div className="font-label-md text-label-md text-on-surface font-bold">
                   Condition Alpha: Normal Line Clear
@@ -361,15 +361,15 @@ export function ComponentsEdgeStatesView() {
                 </div>
               </div>
             </div>
-            <span className="font-label-sm text-label-sm text-secondary font-mono">
+            <span className="font-label-sm text-label-sm text-secondary font-mono pl-space-md sm:pl-0 shrink-0">
               Elevation: 2,258 m
             </span>
           </div>
 
           {/* Card Amber */}
-          <div className="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center justify-between">
+          <div className="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
             <div className="flex items-center gap-space-sm">
-              <div className="w-3 h-3 rounded-full bg-tertiary-container animate-ping"></div>
+              <div className="w-3 h-3 rounded-full bg-tertiary-container animate-ping shrink-0"></div>
               <div>
                 <div className="font-label-md text-label-md text-on-surface font-bold">
                   Condition Amber: Weather Assessment in Progress
@@ -379,7 +379,7 @@ export function ComponentsEdgeStatesView() {
                 </div>
               </div>
             </div>
-            <span className="font-label-sm text-label-sm text-tertiary-container font-mono">
+            <span className="font-label-sm text-label-sm text-tertiary-container font-mono pl-space-md sm:pl-0 shrink-0">
               Hold Period: 45 min
             </span>
           </div>

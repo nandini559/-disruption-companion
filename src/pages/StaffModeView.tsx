@@ -108,7 +108,7 @@ export function StaffModeView({
 
       {/* Success Processed Notification Toast */}
       {showSuccessNotice && resolvedResult && (
-        <div className="w-full mb-space-lg p-space-md rounded-xl bg-primary-container text-on-primary-container shadow-md flex items-center justify-between gap-space-md animate-fade-in">
+        <div className="w-full mb-space-lg p-space-md rounded-xl bg-primary-container text-on-primary-container shadow-md flex flex-col md:flex-row md:items-center justify-between gap-space-md animate-fade-in">
           <div className="flex items-center gap-space-sm">
             <span className="material-symbols-outlined text-[24px]">
               check_circle
@@ -124,7 +124,7 @@ export function StaffModeView({
           </div>
           <button
             onClick={onNavigateToPassenger}
-            className="h-10 px-space-md bg-surface-container-lowest text-primary rounded-lg font-label-md text-label-md font-bold flex items-center gap-1 hover:bg-surface-container-high transition-colors shrink-0"
+            className="w-full md:w-auto h-10 px-space-md bg-surface-container-lowest text-primary rounded-lg font-label-md text-label-md font-bold flex items-center justify-center gap-1 hover:bg-surface-container-high transition-colors shrink-0"
             type="button"
           >
             <span>Go to Passenger Kiosk</span>
@@ -479,7 +479,7 @@ export function StaffModeView({
             </div>
 
             {/* Action Footer for Step 1 */}
-            <div className="flex items-center justify-between p-space-md bg-surface-container-low rounded-xl">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-space-md p-space-md bg-surface-container-low rounded-xl">
               <div className="flex items-center gap-space-xs text-on-surface-variant">
                 <span className="material-symbols-outlined text-[20px] text-secondary">
                   verified_user
@@ -491,7 +491,7 @@ export function StaffModeView({
               <button
                 onClick={() => handleStepSubmit(2)}
                 type="button"
-                className="h-12 px-space-xl bg-primary text-on-primary rounded-lg font-label-lg text-label-lg flex items-center gap-space-xs hover:bg-primary-container transition-colors shadow-md font-semibold"
+                className="w-full sm:w-auto h-12 px-space-lg bg-primary text-on-primary rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-space-xs hover:bg-primary-container transition-colors shadow-md font-semibold"
               >
                 <span>Continue to Disruption Details</span>
                 <span className="material-symbols-outlined text-[20px]">
@@ -892,7 +892,7 @@ export function StaffModeView({
               <button
                 onClick={onNavigateToPassenger}
                 type="button"
-                className="h-14 px-space-2xl bg-primary text-on-primary rounded-xl font-headline-sm text-headline-sm font-bold flex items-center gap-space-xs hover:bg-primary-container transition-all shadow-lg active:scale-95"
+                className="w-full md:w-auto h-14 px-space-lg bg-primary text-on-primary rounded-xl font-headline-sm text-headline-sm font-bold flex items-center justify-center gap-space-xs hover:bg-primary-container transition-all shadow-lg active:scale-95"
               >
                 <span>Broadcast &amp; View Passenger Display</span>
                 <span className="material-symbols-outlined text-[24px]">
