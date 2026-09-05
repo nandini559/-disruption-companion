@@ -14,65 +14,233 @@ export function PassengerTabletView({ activeDisruption }: PassengerTabletViewPro
 
   // Cancel speech synthesis when unmounting or switching languages
   useEffect(() => {
-    return () => {
-      if (typeof window !== "undefined" && "speechSynthesis" in window) {
-        window.speechSynthesis.cancel();
-      }
-    };
-  }, [selectedLang]);
+    if (
+      typeof window !== "undefined" &&
+      "speechSynthesis" in window
+    ) {
+      const loadVoices = () => {
+        const voices = window.speechSynthesis.getVoices();
+
+        console.log(
+          "Available speech voices:",
+          voices.map((voice) => ({
+            name: voice.name,
+            lang: voice.lang,
+            localService: voice.localService,
+          }))
+        );
+      };
+
+      // Load immediately
+      loadVoices();
+
+      // Chrome may load voices later
+      window.speechSynthesis.addEventListener(
+        "voiceschanged",
+        loadVoices
+      );
+
+      return () => {
+        window.speechSynthesis.removeEventListener(
+          "voiceschanged",
+          loadVoices
+        );
+      };
+    }
+  }, []);
 
   // Retrieve current language explanation from activeDisruption or fallback
+  // const currentScenario = activeDisruption?.scenario;
+  // const currentExplanation = currentScenario
+  //   ? currentScenario.explanations[selectedLang] || currentScenario.explanations.en
+  //   : {
+  //     title: "Service Delayed • Toy Train #52541",
+  //     explanation:
+  //       "Your train to Darjeeling is delayed due to heavy monsoon rainfall and track clearance near Batasia Loop.",
+  //     action: "Please wait in the station waiting hall or explore alternate transport at Gate 2.",
+  //   };
+
+
+  const fallbackExplanations: Record<
+    Language,
+    {
+      title: string;
+      explanation: string;
+      action: string;
+    }
+  > = {
+    en: {
+      title: "Service Delayed • Toy Train #52541",
+      explanation:
+        "Your train to Darjeeling is delayed due to heavy monsoon rainfall and track clearance near Batasia Loop.",
+      action:
+        "Please wait in the station waiting hall or explore alternate transport at Gate 2.",
+    },
+
+    hi: {
+      title: "सेवा में देरी • टॉय ट्रेन #52541",
+      explanation:
+        "भारी मानसूनी बारिश और बतासिया लूप के पास ट्रैक साफ करने के कारण दार्जिलिंग जाने वाली आपकी ट्रेन में देरी हो रही है।",
+      action:
+        "कृपया स्टेशन के प्रतीक्षालय में प्रतीक्षा करें या गेट 2 से वैकल्पिक परिवहन की सुविधा लें।",
+    },
+
+    bn: {
+      title: "পরিষেবায় বিলম্ব • টয় ট্রেন #৫২৫৪১",
+      explanation:
+        "ভারী বর্ষণ এবং বাতাসিয়া লুপের কাছে রেলপথ পরিষ্কার করার কারণে দার্জিলিং যাওয়ার আপনার ট্রেনটি বিলম্বিত হয়েছে।",
+      action:
+        "অনুগ্রহ করে স্টেশনের অপেক্ষা কক্ষে অপেক্ষা করুন অথবা গেট ২ থেকে বিকল্প পরিবহন ব্যবহার করুন।",
+    },
+
+    ne: {
+      title: "सेवा ढिलो • टॉय ट्रेन #५२५४१",
+      explanation:
+        "भारी मनसुन वर्षा र बतासिया लूप नजिकको रेलमार्ग सफा गर्ने कामका कारण दार्जिलिङ जाने तपाईंको रेल ढिलो भएको छ।",
+      action:
+        "कृपया स्टेशनको प्रतीक्षालयमा पर्खनुहोस् वा गेट २ बाट वैकल्पिक यातायात प्रयोग गर्नुहोस्।",
+    },
+  };
+
   const currentScenario = activeDisruption?.scenario;
-  const currentExplanation = currentScenario
-    ? currentScenario.explanations[selectedLang] || currentScenario.explanations.en
-    : {
-        title: "Service Delayed • Toy Train #52541",
-        explanation:
-          "Your train to Darjeeling is delayed due to heavy monsoon rainfall and track clearance near Batasia Loop.",
-        action: "Please wait in the station waiting hall or explore alternate transport at Gate 2.",
-      };
+
+  const currentExplanation =
+    currentScenario?.explanations[selectedLang] ??
+    fallbackExplanations[selectedLang] ??
+    currentScenario?.explanations.en ??
+    fallbackExplanations.en;
+
+  console.log("Selected language:", selectedLang);
+  console.log("Current scenario:", currentScenario);
+  console.log("Available explanations:", currentScenario?.explanations);
+  console.log("Current explanation:", currentExplanation);
 
   const currentAction = activeDisruption?.recommendedAction || "WAIT";
 
   // Real Web Speech API Implementation
+  // const handleToggleSpeech = () => {
+  //   if (typeof window === "undefined" || !("speechSynthesis" in window)) {
+  //     alert("Web Speech API is not supported in this browser.");
+  //     return;
+  //   }
+
   const handleToggleSpeech = () => {
-    if (typeof window === "undefined" || !("speechSynthesis" in window)) {
-      alert("Web Speech API is not supported in this browser environment.");
+    if (
+      typeof window === "undefined" ||
+      !("speechSynthesis" in window)
+    ) {
+      alert("Speech synthesis is not supported in this browser.");
       return;
     }
 
     const synth = window.speechSynthesis;
 
+    // Stop currently playing speech
     if (isPlayingAudio) {
       synth.cancel();
       setIsPlayingAudio(false);
       return;
     }
 
-    synth.cancel(); // Stop any previous utterance
+    // Stop any previous speech
+    synth.cancel();
 
-    const textToSpeak = `${currentExplanation.title}. ${currentExplanation.explanation}. ${currentExplanation.action}`;
-    const utterance = new SpeechSynthesisUtterance(textToSpeak);
+    const textToSpeak =
+      `${currentExplanation.title}. ` +
+      `${currentExplanation.explanation}. ` +
+      `${currentExplanation.action}`;
 
-    // Map language code for SpeechSynthesis
     const langMap: Record<Language, string> = {
-      en: "en-US",
+      en: "en-IN",
       hi: "hi-IN",
       bn: "bn-IN",
-      ne: "hi-IN", // Fallback for Devanagari script Nepali
+      ne: "ne-NP",
     };
 
-    utterance.lang = langMap[selectedLang] || "en-US";
+    const targetLang = langMap[selectedLang];
+
+    console.log("=================================");
+    console.log("Selected language:", selectedLang);
+    console.log("Requested language:", targetLang);
+    console.log("Text:", textToSpeak);
+
+    const utterance = new SpeechSynthesisUtterance(textToSpeak);
+
+    utterance.lang = targetLang;
+    utterance.rate = 0.85;
+    utterance.pitch = 1;
+    utterance.volume = 1;
+
+    const voices = synth.getVoices();
+
+    console.log(
+      "Available voices:",
+      voices.map((voice) => ({
+        name: voice.name,
+        lang: voice.lang,
+      }))
+    );
+
+    // 1. Try exact language
+    let matchingVoice = voices.find(
+      (voice) =>
+        voice.lang.toLowerCase() === targetLang.toLowerCase()
+    );
+
+    // 2. Try language prefix
+    if (!matchingVoice) {
+      const languagePrefix = targetLang
+        .split("-")[0]
+        .toLowerCase();
+
+      matchingVoice = voices.find((voice) =>
+        voice.lang.toLowerCase().startsWith(languagePrefix)
+      );
+    }
+
+    if (matchingVoice) {
+      utterance.voice = matchingVoice;
+
+      console.log(
+        "✅ Selected voice:",
+        matchingVoice.name,
+        matchingVoice.lang
+      );
+    } else {
+      console.error(
+        `❌ No voice available for ${selectedLang} (${targetLang})`
+      );
+
+      if (selectedLang === "bn") {
+        alert(
+          "Bengali speech voice is not installed/available in this browser."
+        );
+      }
+
+      if (selectedLang === "ne") {
+        alert(
+          "Nepali speech voice is not installed/available in this browser."
+        );
+      }
+
+      return;
+    }
+
+    utterance.onstart = () => {
+      console.log("🔊 Speech started");
+      setIsPlayingAudio(true);
+    };
 
     utterance.onend = () => {
+      console.log("✅ Speech finished");
       setIsPlayingAudio(false);
     };
 
-    utterance.onerror = () => {
+    utterance.onerror = (event) => {
+      console.error("❌ Speech synthesis error:", event);
       setIsPlayingAudio(false);
     };
 
-    setIsPlayingAudio(true);
     synth.speak(utterance);
   };
 
@@ -121,11 +289,10 @@ export function PassengerTabletView({ activeDisruption }: PassengerTabletViewPro
             type="button"
             role="tab"
             aria-selected={selectedLang === "en"}
-            className={`h-14 rounded-lg font-headline-sm text-headline-sm font-bold flex items-center justify-center gap-space-xs transition-all shadow-sm ${
-              selectedLang === "en"
-                ? "bg-primary text-on-primary"
-                : "bg-surface-container-lowest text-on-surface hover:bg-surface-container"
-            }`}
+            className={`h-14 rounded-lg font-headline-sm text-headline-sm font-bold flex items-center justify-center gap-space-xs transition-all shadow-sm ${selectedLang === "en"
+              ? "bg-primary text-on-primary"
+              : "bg-surface-container-lowest text-on-surface hover:bg-surface-container"
+              }`}
           >
             <span className="text-xl">🇬🇧</span>
             <span>English</span>
@@ -136,11 +303,10 @@ export function PassengerTabletView({ activeDisruption }: PassengerTabletViewPro
             type="button"
             role="tab"
             aria-selected={selectedLang === "hi"}
-            className={`h-14 rounded-lg font-headline-sm text-headline-sm font-bold flex items-center justify-center gap-space-xs transition-all ${
-              selectedLang === "hi"
-                ? "bg-primary text-on-primary"
-                : "bg-surface-container-lowest text-on-surface hover:bg-surface-container"
-            }`}
+            className={`h-14 rounded-lg font-headline-sm text-headline-sm font-bold flex items-center justify-center gap-space-xs transition-all ${selectedLang === "hi"
+              ? "bg-primary text-on-primary"
+              : "bg-surface-container-lowest text-on-surface hover:bg-surface-container"
+              }`}
           >
             <span className="text-xl">🇮🇳</span>
             <span>हिंदी (Hindi)</span>
@@ -151,11 +317,10 @@ export function PassengerTabletView({ activeDisruption }: PassengerTabletViewPro
             type="button"
             role="tab"
             aria-selected={selectedLang === "bn"}
-            className={`h-14 rounded-lg font-headline-sm text-headline-sm font-bold flex items-center justify-center gap-space-xs transition-all ${
-              selectedLang === "bn"
-                ? "bg-primary text-on-primary"
-                : "bg-surface-container-lowest text-on-surface hover:bg-surface-container"
-            }`}
+            className={`h-14 rounded-lg font-headline-sm text-headline-sm font-bold flex items-center justify-center gap-space-xs transition-all ${selectedLang === "bn"
+              ? "bg-primary text-on-primary"
+              : "bg-surface-container-lowest text-on-surface hover:bg-surface-container"
+              }`}
           >
             <span className="text-xl">🇧🇩</span>
             <span>বাংলা (Bengali)</span>
@@ -166,11 +331,10 @@ export function PassengerTabletView({ activeDisruption }: PassengerTabletViewPro
             type="button"
             role="tab"
             aria-selected={selectedLang === "ne"}
-            className={`h-14 rounded-lg font-headline-sm text-headline-sm font-bold flex items-center justify-center gap-space-xs transition-all ${
-              selectedLang === "ne"
-                ? "bg-primary text-on-primary"
-                : "bg-surface-container-lowest text-on-surface hover:bg-surface-container"
-            }`}
+            className={`h-14 rounded-lg font-headline-sm text-headline-sm font-bold flex items-center justify-center gap-space-xs transition-all ${selectedLang === "ne"
+              ? "bg-primary text-on-primary"
+              : "bg-surface-container-lowest text-on-surface hover:bg-surface-container"
+              }`}
           >
             <span className="text-xl">🇳🇵</span>
             <span>नेपाली (Nepali)</span>
@@ -245,11 +409,10 @@ export function PassengerTabletView({ activeDisruption }: PassengerTabletViewPro
               <button
                 onClick={handleToggleSpeech}
                 type="button"
-                className={`h-14 px-space-lg rounded-xl text-on-primary transition-all flex items-center justify-center gap-space-sm shadow-md active:scale-95 shrink-0 font-bold ${
-                  isPlayingAudio
-                    ? "bg-tertiary animate-pulse"
-                    : "bg-primary hover:bg-primary-container"
-                }`}
+                className={`h-14 px-space-lg rounded-xl text-on-primary transition-all flex items-center justify-center gap-space-sm shadow-md active:scale-95 shrink-0 font-bold ${isPlayingAudio
+                  ? "bg-tertiary animate-pulse"
+                  : "bg-primary hover:bg-primary-container"
+                  }`}
               >
                 <span
                   className="material-symbols-outlined text-[30px]"
@@ -323,11 +486,10 @@ export function PassengerTabletView({ activeDisruption }: PassengerTabletViewPro
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
           {/* Action 1: WAIT */}
           <div
-            className={`p-space-lg rounded-xl shadow-md flex flex-col gap-space-sm border-t-4 border-primary transition-all ${
-              currentAction === "WAIT"
-                ? "ring-4 ring-primary shadow-xl scale-[1.02] opacity-100 bg-surface-container-lowest"
-                : "opacity-75 bg-surface-container-low"
-            }`}
+            className={`p-space-lg rounded-xl shadow-md flex flex-col gap-space-sm border-t-4 border-primary transition-all ${currentAction === "WAIT"
+              ? "ring-4 ring-primary shadow-xl scale-[1.02] opacity-100 bg-surface-container-lowest"
+              : "opacity-75 bg-surface-container-low"
+              }`}
           >
             <div className="flex items-center justify-between">
               <div className="w-10 h-10 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center font-bold">
@@ -350,11 +512,10 @@ export function PassengerTabletView({ activeDisruption }: PassengerTabletViewPro
 
           {/* Action 2: ANNOUNCEMENT */}
           <div
-            className={`p-space-lg rounded-xl shadow-md flex flex-col gap-space-sm border-t-4 border-secondary transition-all ${
-              currentAction === "ANNOUNCEMENT"
-                ? "ring-4 ring-secondary shadow-xl scale-[1.02] opacity-100 bg-surface-container-lowest"
-                : "opacity-75 bg-surface-container-low"
-            }`}
+            className={`p-space-lg rounded-xl shadow-md flex flex-col gap-space-sm border-t-4 border-secondary transition-all ${currentAction === "ANNOUNCEMENT"
+              ? "ring-4 ring-secondary shadow-xl scale-[1.02] opacity-100 bg-surface-container-lowest"
+              : "opacity-75 bg-surface-container-low"
+              }`}
           >
             <div className="flex items-center justify-between">
               <div className="w-10 h-10 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold">
@@ -377,11 +538,10 @@ export function PassengerTabletView({ activeDisruption }: PassengerTabletViewPro
 
           {/* Action 3: ALTERNATIVE_TRANSPORT */}
           <div
-            className={`p-space-lg rounded-xl shadow-md flex flex-col gap-space-sm border-t-4 border-tertiary-container transition-all ${
-              currentAction === "ALTERNATIVE_TRANSPORT"
-                ? "ring-4 ring-tertiary-container shadow-xl scale-[1.02] opacity-100 bg-surface-container-lowest"
-                : "opacity-75 bg-surface-container-low"
-            }`}
+            className={`p-space-lg rounded-xl shadow-md flex flex-col gap-space-sm border-t-4 border-tertiary-container transition-all ${currentAction === "ALTERNATIVE_TRANSPORT"
+              ? "ring-4 ring-tertiary-container shadow-xl scale-[1.02] opacity-100 bg-surface-container-lowest"
+              : "opacity-75 bg-surface-container-low"
+              }`}
           >
             <div className="flex items-center justify-between">
               <div className="w-10 h-10 rounded-lg bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-bold">
@@ -404,11 +564,10 @@ export function PassengerTabletView({ activeDisruption }: PassengerTabletViewPro
 
           {/* Action 4: REFUND */}
           <div
-            className={`p-space-lg rounded-xl shadow-md flex flex-col gap-space-sm border-t-4 border-primary-container transition-all ${
-              currentAction === "REFUND"
-                ? "ring-4 ring-primary-container shadow-xl scale-[1.02] opacity-100 bg-surface-container-lowest"
-                : "opacity-75 bg-surface-container-low"
-            }`}
+            className={`p-space-lg rounded-xl shadow-md flex flex-col gap-space-sm border-t-4 border-primary-container transition-all ${currentAction === "REFUND"
+              ? "ring-4 ring-primary-container shadow-xl scale-[1.02] opacity-100 bg-surface-container-lowest"
+              : "opacity-75 bg-surface-container-low"
+              }`}
           >
             <div className="flex items-center justify-between">
               <div className="w-10 h-10 rounded-lg bg-primary-fixed text-on-primary-fixed-variant flex items-center justify-center font-bold">
