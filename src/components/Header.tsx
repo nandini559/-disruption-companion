@@ -53,12 +53,12 @@ export function Header({ activeTab, setActiveTab }: HeaderProps) {
                 {/* Brand logo & title */}
                 <button
                     type="button"
-                    className="flex items-center gap-space-sm min-w-0 flex-1 lg:flex-1 cursor-pointer text-left rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50"
+                    className="flex items-center gap-space-sm min-w-0 flex-1 lg:flex-1 cursor-pointer text-left rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/50 h-8 w-8 md:h-9"
                     onClick={() => handleSelect("home")}
                     aria-label="Go to home"
                 >
                     <DhrLogo className="h-8 w-8 md:h-9 md:w-9 shrink-0 object-contain" />
-                    <div className="flex flex-col min-w-0">
+                    {/* <div className="flex flex-col min-w-0">
                         <div className="flex items-center gap-space-xs">
                             <span className="font-headline-sm text-headline-sm text-primary tracking-tight font-bold truncate">
                                 DHR Sahayak
@@ -70,7 +70,7 @@ export function Header({ activeTab, setActiveTab }: HeaderProps) {
                         <span className="font-label-sm text-label-sm text-on-surface-variant hidden md:inline-block truncate">
                             Darjeeling Himalayan Railway • Station Disruption Companion
                         </span>
-                    </div>
+                    </div> */}
                 </button>
 
                 {/* Desktop navigation tabs (centered) */}
